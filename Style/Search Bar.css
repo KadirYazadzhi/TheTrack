@@ -82,12 +82,12 @@
     cursor: pointer;
 }
 .container input:focus {
-    width: 270px;
+    width: 285px;
     opacity: 1;
     cursor: text;
 }
 .container input:focus ~ .search {
-    right: -375px;
+    right: -405px;
     background: #151515;
     z-index: 6;
 }

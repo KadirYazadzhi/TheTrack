@@ -5,7 +5,12 @@
     font-family: "Istok Web", sans-serif;
 }
 
-
+.box-product {
+    width: 60px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+}
 section {
     position: relative;
     top: 40px;
@@ -20,6 +25,8 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
+
+
 }
 body {
     display: flex;
@@ -27,6 +34,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #ffffff;
+    border: 20px;
 }
 .card {
     position: relative;
@@ -34,8 +42,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 350px;
-    height: 480px;
+    width: 310px;
+    height: 440px;
     background: #191919;
     border-radius: 20px;
     overflow: hidden;

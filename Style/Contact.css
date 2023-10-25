@@ -3,16 +3,18 @@ body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .contact-form-wrapper {
     padding: 100px 0;
-}
 
+}
 .contact-form {
     padding: 30px 40px;
     background-color: #02428a;
     border-radius: 12px;
     max-width: 600px;
     max-height: 600px;
+
 }
 
 .contact-form textarea {

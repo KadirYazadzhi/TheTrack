@@ -15,24 +15,26 @@ body {
 }
 
 .container {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
 .container .card {
     position: relative;
     width: 370px;
+    max-width: 370px;
     height: 500px;
+    max-height: 500px;
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
     margin: 10px;
     border: 1px solid #ddd;
-    float: left;
     box-sizing: border-box;
     box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.09), 0 0 8px #17238d;
-    display: inline-block;
+
 
 }
 .container .card {
