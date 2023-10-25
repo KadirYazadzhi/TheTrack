@@ -12,11 +12,8 @@
     position: relative;
 }
 section {
-    position: relative;
-    top: 40px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+
+margin-left: 100px;
 
 }
 .product-text-area {
@@ -28,15 +25,19 @@ section {
 
 
 }
+
 body {
-    display: flex;
+    display: grid;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: #ffffff;
-    border: 20px;
+    border: 0;
 }
 .card {
+    justify-content: center;
+    align-items: center;
     position: relative;
     top: 80px;
     left: 0;
@@ -47,9 +48,11 @@ body {
     background: #191919;
     border-radius: 20px;
     overflow: hidden;
-    margin: 10px;
-    border: 1px solid #ddd;
     float: left;
+    margin:10px;
+
+    border: 1px solid #ddd;
+
     box-sizing: border-box;
     box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.09), 0 0 8px #17238d;
 
