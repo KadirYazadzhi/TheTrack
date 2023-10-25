@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Istok Web", sans-serif;
+}
+
+
+section {
+    position: relative;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+.product-text-area {
+    position: relative;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+}
+.card {
+    position: relative;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    height: 480px;
+    background: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px;
+    border: 1px solid #ddd;
+    float: left;
+    box-sizing: border-box;
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.09), 0 0 8px #17238d;
+
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #17238d;
+    transform: skewY(345deg);
+    transition: 0.5s;
+
+}
+
+.card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+
+}
+
+.card::after {
+    content: "The Track";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.1);
+    border-color: #ffffff;
+
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+
+.card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+
+}
+
+.card .contentBox h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #000000;
+    text-decoration: none;
+    background: #003cff;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.09), 0 0 8px #000bbb;
+}
+
+.card:hover .contentBox .buy {
+    top: 0;
+    opacity: 1;
+}
+
+.mouse {
+    height: 250px;
+    width: auto;
+}

@@ -1,0 +1,282 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    color: #b3b2ff;
+}
+.icon-image {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    top: 1px;
+
+}
+.icon-text {
+
+    font-size: 14px;
+   position: relative;
+    left: 10px;
+    bottom: 10px;
+
+}
+.and {
+    width: 150px;
+    height: 35px;
+    border: 1px solid grey;
+    border-radius: 30px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+    margin: 5px;
+    position: relative;
+    display: inline-block;
+    bottom: 16px;
+}
+
+/*Stars Animation*/
+/* These styles are applied by default.
+   They will also override the hover
+   style for all stars to the right
+   of the currently hovered star. */
+.rate i, .rate i:hover ~ i {
+    color: #222;
+    text-shadow: none;
+    transition: color 200ms,
+    text-shadow 200ms;
+    /* This will remove the delay when
+       moving the cursor left or right
+       within the set of stars. */
+    transition-delay: 0;
+}
+
+/* This is the style that will be
+   applied to all stars and then
+   subsequently removed from the stars
+   to the right of the one being
+   hovered. */
+.rate:hover i {
+    color: #fc0;
+    text-shadow: #fc0 0 0 20px;
+}
+
+/* Make the effect apply one star at a
+   time. Limiting the selector to when
+   .rate is hovered removes the effect
+   without delay when cursor leaves
+   the .rate area. */
+.rate:hover i:nth-child(2) {
+    transition-delay: 30ms;
+}
+
+.rate:hover i:nth-child(3) {
+    transition-delay: 60ms;
+}
+
+.rate:hover i:nth-child(4) {
+    transition-delay: 90ms;
+}
+
+.rate:hover i:nth-child(5) {
+    transition-delay: 120ms;
+}
+
+/* Miscellaneous styles. */
+.rate i {
+    cursor: pointer;
+    font-style: normal;
+}
+.arrow {
+    width: 30px;
+    left:25px;
+    top: 15px;
+    position: absolute;
+
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+}
+/* Columns */
+.left-column {
+    width: 65%;
+    position: relative;
+}
+
+.right-column {
+    width: 35%;
+    margin-top: 60px;
+}
+/* Left Column */
+.left-column img {
+    width: 70%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    opacity: 10;
+    transition: all 0.3s ease;
+}
+
+.left-column img.active {
+    opacity: 1;
+}
+/* Product Description */
+.product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+}
+.product-description span {
+    font-size: 14px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+}
+.product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+}
+/* Product Color */
+.product-color {
+    margin-bottom: 30px;
+}
+
+.color-choose div {
+    display: inline-block;
+}
+
+.color-choose input[type="radio"] {
+    display: none;
+}
+
+.color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+
+
+
+.color-choose input[type="radio"]:checked + label span {
+    background-image: url(Снимки/kaska-6.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* Cable Configuration */
+.cable-choose {
+    margin-bottom: 20px;
+}
+
+.cable-choose button {
+    border: 2px solid #E1E8EE;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font-size: 14px;
+    color: #5E6977;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.cable-choose button:hover,
+.cable-choose button:active,
+.cable-choose button:focus {
+    border: 2px solid #86939E;
+    outline: none;
+}
+
+.cable-config {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+}
+
+.cable-config a {
+    color: #358ED7;
+    text-decoration: none;
+    font-size: 12px;
+    position: relative;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.cable-config a:before {
+    content: "?";
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid rgba(53, 142, 215, 0.5);
+    display: inline-block;
+    text-align: center;
+    line-height: 16px;
+    opacity: 0.5;
+    margin-right: 5px;
+}
+/* Product Price */
+.product-price {
+    display: flex;
+    align-items: center;
+}
+
+.product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+}
+
+.cart-btn {
+    display: inline-block;
+    background-color: #3f51b5;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+}
+.cart-btn:hover {
+    background-color: #283474;
+}
+/* Responsive */
+@media (max-width: 940px) {
+    .container {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .left-column img {
+        width: 300px;
+        right: 0;
+        top: -65px;
+        left: initial;
+    }
+}
+
+@media (max-width: 535px) {
+    .left-column img {
+        width: 220px;
+        top: -85px;
+    }
+}
