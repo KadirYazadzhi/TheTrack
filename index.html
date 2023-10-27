@@ -5,35 +5,34 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style/Style.css">
-    <link rel="stylesheet" href="Style/Menu.css">
+    <link rel="stylesheet" href="Style/Navbar.css">
     <link rel="stylesheet" href="Style/Footer.css">
     <link rel="stylesheet" href="Style/Animation.css">
-
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <title>The Track</title>
 </head>
 
-    <nav id="navbar" class="">
-        <div class="nav-wrapper">
-            <!-- Navbar Logo -->
-            <div class="logo">
-                <!-- Logo Placeholder for Illustration -->
-                <a href="#home"><img class="official-logo" src="Снимки/home-logo-official.png"></a>
-            </div>
+<nav class="nav">
+    <i class="uil uil-bars navOpenBtn"></i>
 
+    <a href="index.html" class="hl"></a>
 
-            <!-- Navbar Links -->
-            <ul id="menu">
-                <li class="active"><a href="index.html">Начало</a></li>
-                <li><a href="Offers.html">Услуги</a></li>
-                <li><a href="Product.html">Продукти</a></li>
-                <li><a href="Gallery.html">Галерия</a></li>
-                <li><a href="Contact.html">Контакти</a></li>
-                <li><a href="About%20Us.html">За нас</a></li>
-            </ul>
-            </ul>
+    <ul id="navbar" class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li class="active"><a href="index.html">Начало</a></li>
+        <li><a href="Offers.html">Услуги</a></li>
+        <li><a href="Product.html">Продукти</a></li>
+        <li><a href="Gallery.html">Галерия</a></li>
+        <li><a href="Contact.html">Контакти</a></li>
+        <li><a href="About%20Us.html">За нас</a></li>
+    </ul>
 
-        </div>
-    </nav>
+    <i class="uil uil-search search-icon" id="searchIcon"></i>
+    <div class="search-box">
+        <i class="uil uil-search search-icon"></i>
+        <input type="text" placeholder="Search here..." />
+    </div>
+</nav>
 
 <div class="menuIcon">
     <span class="icon icon-bars"></span>
@@ -145,5 +144,6 @@
 </footer>
 </section>
 <script src="Script/script.js"></script>
+<script type="text/javascript" src="Script/Navbar.js"></script>
 </html>
 

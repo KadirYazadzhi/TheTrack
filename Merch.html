@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <title>Merch</title>
   <link rel="stylesheet" href="Style/Merch.css">
-<script type="text/javascript" src="Script/Merch.js"></script>
+  <link rel="stylesheet" href="Style/Navbar.css">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+
 </head>
 <body>
+<nav class="nav">
+  <i class="uil uil-bars navOpenBtn"></i>
+  
+  <a href="index.html" class="hl"></a>
+
+  <ul id="navbar" class="nav-links">
+    <i class="uil uil-times navCloseBtn"></i>
+    <li><a href="index.html">Начало</a></li>
+    <li><a href="Offers.html">Услуги</a></li>
+    <li class="active"><a href="Product.html">Продукти</a></li>
+    <li><a href="Gallery.html">Галерия</a></li>
+    <li><a href="Contact.html">Контакти</a></li>
+    <li><a href="About%20Us.html">За нас</a></li>
+  </ul>
+
+  <i class="uil uil-search search-icon" id="searchIcon"></i>
+  <div class="search-box">
+    <i class="uil uil-search search-icon"></i>
+    <input type="text" placeholder="Search here..." />
+  </div>
+</nav>
+
+
 <div class="contenedorCards">
   <div class="card">
     <div class="wrapper">
@@ -163,5 +190,7 @@
 
 
 </body>
+<script type="text/javascript" src="Script/Merch.js"></script>
+<script type="text/javascript" src="Script/Navbar.js"></script>
 
 </html>
