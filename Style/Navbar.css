@@ -26,6 +26,7 @@ body {
     border-radius: 5px;
     margin-top: 0px;
     box-shadow: 0 4px 10px rgb(46, 79, 255);
+    z-index: 102;
 
 }
 
@@ -128,6 +129,7 @@ li.dropdown:hover .dropdown-content {
     padding: 15px 200px;
     background: #044d9d;
     box-shadow: 0 4px 10px rgb(46, 79, 255);
+    z-index: 100;
 }
 .nav,
 .nav .nav-links {
