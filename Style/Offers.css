@@ -5,7 +5,46 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
 
+.slider {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.container {
+    width: 50%; /* Показваме по две карточки на екрана */
+    flex-shrink: 0;
+    margin-right: 10px; /* Разстояние между карточките */
+    padding: 20px;
+
+}
+
+.nav-arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.arrow {
+    cursor: pointer;
+}
+
+.left-arrow {
+    margin-left: 10px;
+}
+
+.right-arrow {
+    margin-right: 10px;
+}
 body {
     display: flex;
     justify-content: center;

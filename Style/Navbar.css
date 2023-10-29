@@ -11,6 +11,56 @@ body {
     background: #f0faff;
 }
 
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/* Скриваме dropdown по подразбиране */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003281;
+    border: 1px solid #0057e0;
+    border-radius: 5px;
+    margin-top: 0px;
+    box-shadow: 0 4px 10px rgb(46, 79, 255);
+
+}
+
+/* Скриваме и показваме dropdown при hover върху родителския елемент (li.dropdown) */
+li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Стилизираме опциите в dropdown менюто */
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+
+
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
 
 #navbar li {
     display: inline-block;
@@ -204,7 +254,8 @@ a {
         z-index: 100;
     }
     .nav.openNav .nav-links {
-        left: 0;
+        left: -20px;
+
     }
     .nav .navOpenBtn {
         color: #fff;

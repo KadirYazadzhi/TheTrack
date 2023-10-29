@@ -39,8 +39,9 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    display: grid;
     top: 80px;
-    left: 0;
+    left: 100px;
     right: 0;
     bottom: 0;
     width: 310px;
@@ -149,4 +150,9 @@ body {
 .mouse {
     height: 250px;
     width: auto;
+}
+@media screen and (max-width: 768px) {
+    .card {
+        left: 16px;
+    }
 }
