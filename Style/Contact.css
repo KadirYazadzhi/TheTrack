@@ -87,3 +87,27 @@ body {
     background-color: #5c5ae5;
 }
 
+
+/* Медийни заявки за мобилни устройства */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        padding: 10px; /* Намалете вътрешните отстояния */
+    }
+
+    .contact-form .form-input,
+    .contact-form .form-text-area {
+        height: 30px; /* Намалете височината на полетата */
+    }
+
+    .contact-form .title {
+        font-size: 18px; /* Намалете размера на заглавието */
+    }
+
+    .contact-form .description {
+        font-size: 10px; /* Намалете размера на описанието */
+    }
+
+    .contact-form .submit-button-wrapper input {
+        padding: 8px 30px; /* Намалете размера на бутона */
+    }
+}

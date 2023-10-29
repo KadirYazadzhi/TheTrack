@@ -18,6 +18,44 @@ body {
 body {
     background-image: radial-gradient(mintcream 0%, lightgray 100%);
 }
+
+/* Стилове за модалния прозорец */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+
+}
+
+.modal-content img {
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Стилове за затварящия бутон */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 h1 {
     display: table;
     margin: 5% auto 0;
@@ -109,38 +147,38 @@ img:hover {
 
 @media screen and (max-width: 768px) {
     img {
-        width: 240px;
-        height: 156px;
+        width: 190px;
+        height: 146px;
         cursor: pointer;
         transition: all 0.5s ease;
     }
 
     #carousel figure:nth-child(1) {
-        transform: rotateY(0deg) translateZ(296px);
+        transform: rotateY(0deg) translateZ(276px);
     }
     #carousel figure:nth-child(2) {
-        transform: rotateY(40deg) translateZ(296px);
+        transform: rotateY(40deg) translateZ(276px);
     }
     #carousel figure:nth-child(3) {
-        transform: rotateY(80deg) translateZ(296px);
+        transform: rotateY(80deg) translateZ(276px);
     }
     #carousel figure:nth-child(4) {
-        transform: rotateY(120deg) translateZ(296px);
+        transform: rotateY(120deg) translateZ(276px);
     }
     #carousel figure:nth-child(5) {
-        transform: rotateY(160deg) translateZ(296px);
+        transform: rotateY(160deg) translateZ(276px);
     }
     #carousel figure:nth-child(6) {
-        transform: rotateY(200deg) translateZ(296px);
+        transform: rotateY(200deg) translateZ(276px);
     }
     #carousel figure:nth-child(7) {
-        transform: rotateY(240deg) translateZ(296px);
+        transform: rotateY(240deg) translateZ(276px);
     }
     #carousel figure:nth-child(8) {
-        transform: rotateY(280deg) translateZ(296px);
+        transform: rotateY(280deg) translateZ(276px);
     }
     #carousel figure:nth-child(9) {
-        transform: rotateY(320deg) translateZ(296px);
+        transform: rotateY(320deg) translateZ(276px);
     }
 
     .container {
@@ -155,8 +193,8 @@ img:hover {
     #carousel figure {
         display: block;
         position: absolute;
-        width: 210px;
-        height: 126px;
+        width: 190px;
+        height: 116px;
         left: 10px;
         top: 10px;
         background: #002d5f;
