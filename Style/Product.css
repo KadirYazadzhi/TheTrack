@@ -154,5 +154,13 @@ body {
 @media screen and (max-width: 768px) {
     .card {
         left: 22px;
+        float: none;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    section {
+
+        margin-left: 24px;
+
     }
 }
