@@ -2,22 +2,6 @@
     font-family: Nunito, sans-serif;
 }
 
-.map-responsive{
-    overflow:hidden;
-
-    position:relative;
-    right: 200px;
-    left: 320px;
-    bottom: 0;
-    top: 0;
-    width: 900px;
-    height:450px;
-    border-radius: 10px;
-    border: grey;
-    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.09), 0 0 8px #b6b6b6;
-    color: #ffffff;
-
-}
 
 .map-responsive iframe{
     left:0;
@@ -73,6 +57,7 @@
 }
 
 .responsive-container-block.Container {
+    z-index: 1;
     max-width: 1320px;
     justify-content: space-evenly;
     align-items: center;
