@@ -4,6 +4,13 @@
     font-weight: 400;
     src: url(https://fonts.gstatic.com/s/materialiconsoutlined/v54/gok-H7zzDkdnRel8-DQ6KAXJ69wP1tGnf4ZGhUce.woff2) format("woff2");
 }
+
+footer {
+    position: fixed;
+    bottom: -100px;
+    width: 100%;
+    display: flex;
+}
 .material-icons-outlined {
     font-family: "Material Icons Outlined";
     font-weight: normal;
@@ -32,6 +39,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     body {
@@ -51,6 +59,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
     width: 700px;
+
 }
 @media (min-width: 768px) and (max-width: 1023px) {
     .contact_wrapper {
