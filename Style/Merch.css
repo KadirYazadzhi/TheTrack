@@ -45,10 +45,12 @@ body li {
     min-height: 100vh;
     padding: 20px 0;
     box-sizing: border-box;
+    grid-template-columns: repeat(3,1fr);
 }
 .contenedorCards .card {
     width: 300px;
     transition: ease all 0.3s;
+
 }
 .contenedorCards .card.esFav .wrapper .infoProd .actions .action.aFavs {
     transform: rotateX(360deg) scale(1.2);
