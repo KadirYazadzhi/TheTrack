@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Form</title>
+  <link rel="stylesheet" href="/Style/Checkout%20Form.css">
+</head>
+<body>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<div class="modal clearfix">
+  <div class="modal-product">
+    <div class="product">
+
+      <!-- Slideshow container -->
+      <div class="product-slideshow">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="productSlides fade">
+          <img src="Снимки/kaska-6.png" style="width:100%">
+        </div>
+
+        <div class="productSlides fade">
+          <img src="Image/Sparco_Club_J-1%20(1).png" style="width:100%">
+        </div>
+
+        <div class="productSlides fade">
+          <img src="Image/Sparco_Club_J-1%20(2).png" style="width:100%">
+        </div>
+
+
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+
+        </div>
+
+      </div>
+
+      <h1 class="product-name">
+        Sparco Club J-1
+      </h1>
+      <p class="product-code-name">
+        178936578
+      </p>
+      <p class="product-price">
+        182.<small>00</small> лв.
+      </p>
+
+    </div>
+
+    <div class="round-shape"></div>
+  </div>
+  <div class="modal-info">
+    <div class="info">
+      <h2>Payment Information</h2>
+      <form action="#">
+        <ul class="form-list">
+          <li class="form-list-row">
+            <div class="user">
+              <label for="#">Name</label><br>
+              <i class="fas fa-user"></i></i><input type="text" required>
+            </div>
+          </li>
+          <li class="form-list-row">
+            <div class="number">
+              <label for="#">Card Number</label><br>
+              <i class="far fa-credit-card"></i><input type="text" required>
+            </div>
+          </li>
+          <li class="form-list-row clearfix">
+            <div class="date">
+              <label for="#">Expiration Date</label><br>
+              <input class="month" type="text" required placeholder="MM">
+              <input class="year" type="text" required placeholder="YY">
+            </div>
+            <div class="cvc">
+              <label for="#">CVC</label><i class="fas fa-question-circle"></i><br>
+              <input type="text" required placeholder="123">
+            </div>
+          </li>
+          <li class="form-list-row">
+            <div class="checkbox">
+              <label for="checkbox">
+                <input id="checkbox" type="checkbox">
+                <span>Remember My Information</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+        <button>Pay Now</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="Script/Checkout%20Form.js"></script>
+</body>
+</html>
