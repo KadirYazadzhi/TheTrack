@@ -150,7 +150,7 @@ body {
 }
 @media screen and (max-width: 768px) {
     .card {
-        left: 38px;
+        left: 30px;
         float: none;
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -161,12 +161,12 @@ body {
 
     }
     .card {
-        width: 270px;
-        height: 390px;
+        width: 290px;
+        height: 410px;
         top: 20px;
     }
     .mouse {
-        height: 220px;
+        height: 230px;
         width: auto;
     }
     .card .contentBox h3 {
@@ -176,6 +176,8 @@ body {
         font-size: 22px;
     }
     .card .contentBox .buy {
-        padding: 10px 10px;
+        padding: 8px 10px;
+        font-size: 14px;
+        font-weight: 500;
     }
 }
