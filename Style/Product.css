@@ -11,11 +11,7 @@
     margin: 10px;
     position: relative;
 }
-section {
 
-margin-left: 100px;
-
-}
 .product-text-area {
     position: relative;
     top: 70px;
@@ -34,6 +30,7 @@ body {
     min-height: 100vh;
     background: #ffffff;
     border: 0;
+
 }
 .card {
     justify-content: center;
@@ -153,7 +150,7 @@ body {
 }
 @media screen and (max-width: 768px) {
     .card {
-        left: 22px;
+        left: 38px;
         float: none;
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -162,5 +159,23 @@ body {
 
         margin-left: 24px;
 
+    }
+    .card {
+        width: 270px;
+        height: 390px;
+        top: 20px;
+    }
+    .mouse {
+        height: 220px;
+        width: auto;
+    }
+    .card .contentBox h3 {
+        font-size: 16px;
+    }
+    .card .contentBox .price {
+        font-size: 22px;
+    }
+    .card .contentBox .buy {
+        padding: 10px 10px;
     }
 }

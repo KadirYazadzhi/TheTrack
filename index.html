@@ -33,9 +33,9 @@
     </ul>
 
     <i class="uil uil-search search-icon" id="searchIcon"></i>
-    <div class="search-box">
-        <i class="uil uil-search search-icon"></i>
-        <input type="text" id="myInput"  onkeyup="myFunction()" placeholder="Search here..." />
+    <div class="search-box" >
+        <i class="uil uil-search search-icon" onclick="showDropdown()"></i>
+        <input type="text" id="myInput"   onkeyup="myFunction()" placeholder="Search here..." />
         <ul id="myUL">
             <li><a href="index.html#About Us">За нас</a></li>
             <li><a href="index.html#Our-Clients">Нашите клиенти</a></li>
@@ -45,6 +45,16 @@
         </ul>
     </div>
     <script>
+        function showDropdown() {
+            var searchBar = document.getElementById("myInput");
+            var dropdown = document.getElementById("myUL");
+
+            if (searchBar.value.trim() === "") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
         function myFunction() {
             // Declare variables
             var input, filter, ul, li, a, i, txtValue;
