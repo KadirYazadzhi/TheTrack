@@ -4,13 +4,7 @@
 
 
 }
-@media screen and (min-width: 1024px) {
-    .home-picture {
-        content: url("https://www.sofiakarting.com/wp-content/uploads/2020/02/track-3.jpg");
-        
-    }
 
-}
 /* Стил на офертите и цените (може да се добави по-късно) */
 .offer {
     border: 1px solid #ccc;
@@ -246,6 +240,7 @@
         width: 100%;
         max-width: 730px;
         max-height: 270px;
+        content: url("https://th.bing.com/th/id/OIG.nLJC1TkQMKBAMsOLh_Oh?pid=ImgGn");
 
 
 
