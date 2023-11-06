@@ -27,3 +27,23 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+// Избираме бутона с клас "next"
+const nextButton = document.querySelector('.next');
+
+// Избираме div-овете с клас "info" и "delivery-modal"
+const infoDiv = document.querySelector('.info');
+const deliveryDiv = document.querySelector('.delivery-modal');
+
+// Добавяме събитие "click" на бутона
+nextButton.addEventListener('click', function() {
+    // Смяна на стиловете на div-овете
+    if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
+        infoDiv.style.display = 'block';
+        deliveryDiv.style.display = 'none';
+    } else {
+        infoDiv.style.display = 'none';
+        deliveryDiv.style.display = 'block';
+    }
+});

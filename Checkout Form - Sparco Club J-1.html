@@ -57,7 +57,12 @@
     <div class="round-shape"></div>
   </div>
   <div class="modal-info">
-    <div class="info">
+
+    <div id="circle">
+      <a class="link"  href="Club%20X-1.html"><div><img class="arrow" src="Image/right-arrow.png"></div></a>
+    </div>
+
+    <div class="info" style="display: none">
       <h2>Payment Information</h2>
       <form action="#">
         <ul class="form-list">
@@ -94,7 +99,58 @@
           </li>
         </ul>
         <button>Pay Now</button>
+
       </form>
+    </div>
+    <div class="delivery-modal" style="display: block">
+      <div class="delivery">
+        <h2 class="title">Delivery Information</h2>
+        <form action="#">
+          <ul class="form-delivery">
+            <li class="form-delivery-row">
+              <div class="name">
+                <label for="#">Name</label><br>
+                <i class="fas fa-user"></i></i><input type="text" required>
+              </div>
+            </li>
+
+            <li class="form-delivery-row">
+              <div class="number">
+                <label for="#">Number</label><br>
+                <i class="fa fa-phone"></i><input type="text" required>
+              </div>
+            </li>
+
+            <li class="form-delivery-row">
+              <div class="city">
+                <label for="#">City</label><br>
+                <i class="fa fa-map-marker"></i><input type="text" required>
+              </div>
+            </li>
+
+            <li class="form-delivery-row">
+              <div class="street">
+                <label for="#">Street</label><br>
+                <i class="fa fa-home"></i><input type="text" required>
+              </div>
+            </li>
+            <div class="product-labels__group">
+              <li>
+                <label class="product-labels__item">
+                  <input type="radio" class="product-labels__checkbox" name="type5" checked>
+                  <span class="product-labels__txt">Speedy</span>
+                </label>
+                <label class="product-labels__item">
+                  <input type="radio" class="product-labels__checkbox" name="type5">
+                  <span class="product-labels__txt">Econt</span>
+                </label>
+              </li>
+            </div>
+          </ul>
+          <button class="next">Next</button>
+
+        </form>
+      </div>
     </div>
   </div>
 </div>

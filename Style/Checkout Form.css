@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+
 .clearfix:after {
     content: " ";
     /* Older browser do not support empty content */
@@ -139,6 +140,23 @@ body {
     float: right;
     position: relative;
 }
+
+.delivery {
+    width: 60%;
+    height: 100%;
+
+    position: relative;
+
+}
+.delivery-modal {
+    width: 90%;
+    height: 85%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%);
+}
+
 .modal .modal-info .info {
     width: 90%;
     height: 85%;
@@ -147,20 +165,51 @@ body {
     left: 5%;
     transform: translate(0%, -50%);
 }
+
+.title {
+    font-size: 2.25rem;
+    margin-left: 1rem;
+}
+
 .modal .modal-info .info h2 {
     font-size: 2.25rem;
     margin-left: 1rem;
 }
+.form-delivery {
+    margin-top: 1.5rem;
+    margin-left: 3.5rem;
+}
+
 .modal .modal-info .info form .form-list {
     margin-top: 1.5rem;
     margin-left: 3.5rem;
 }
+.form-delivery-row {
+    margin: 1rem 0;
+}
+
 .modal .modal-info .info form .form-list .form-list-row {
     margin: 1rem 0;
 }
+
+.form-delivery-row label{
+    font-size: 1rem;
+}
+
 .modal .modal-info .info form .form-list .form-list-row label {
     font-size: 1rem;
 }
+.form-delivery-row input {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.4rem 0;
+    border: none;
+    display: inline-block;
+    border-bottom: solid 2px #999;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
 .modal .modal-info .info form .form-list .form-list-row input {
     width: 70%;
     font-size: 1rem;
@@ -171,27 +220,58 @@ body {
     background-color: transparent;
     transition: all 0.3s ease;
 }
-.modal .modal-info .info form .form-list .form-list-row input:focus {
-    border-color: #cdb196;
+.form-delivery-row input:focus {
+  border-color: #0b8d66;
 }
+
+.modal .modal-info .info form .form-list .form-list-row input:focus {
+    border-color: #0b218d;
+}
+
+
+
 .modal .modal-info .info form .form-list .form-list-row .user .fa-user {
-    color: #999;
+    color: #000000;
     font-size: 1rem;
 }
+.name input {
+    position: relative;
+    left: -16px;
+    padding-left: 30px;
+}
+
 .modal .modal-info .info form .form-list .form-list-row .user input {
     position: relative;
     left: -16px;
     padding-left: 30px;
 }
+
+
 .modal .modal-info .info form .form-list .form-list-row .number .fa-credit-card {
-    color: #999;
+    color: #000000;
     font-size: 1rem;
+}
+.number input {
+    position: relative;
+    left: -20px;
+    padding-left: 30px;
+}
+.city input {
+    position: relative;
+    left: -20px;
+    padding-left: 30px;
+}
+.street input {
+    position: relative;
+    left: -20px;
+    padding-left: 30px;
 }
 .modal .modal-info .info form .form-list .form-list-row .number input {
     position: relative;
     left: -20px;
     padding-left: 30px;
 }
+
 .modal .modal-info .info form .form-list .form-list-row .date {
     float: left;
 }
@@ -213,6 +293,62 @@ body {
     position: relative;
     left: 0.75rem;
 }
+.product-labels__item {
+    display: inline-block;
+    margin-right: 10px; /* Подрегулирайте този маргин според вашите предпочитания */
+}
+
+@media screen and (max-width: 767px) {
+    .product-labels {
+        width: 100%;
+    }
+}
+.product-labels__checkbox {
+    display: none;
+
+}
+.product-labels__checkbox:checked + .product-labels__txt {
+    border-color: #0defac;
+    padding: 10px 13px;
+
+}
+.product-labels__title {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+}
+.product-labels__group {
+    display: flex;
+    margin-bottom: 15px;
+}
+@media screen and (max-width: 992px) {
+    .product-labels__group {
+        justify-content: center;
+    }
+}
+.product-labels__group:last-child {
+    margin-bottom: 0;
+}
+.product-labels__item {
+    margin: 5px;
+    cursor: pointer;
+}
+.product-labels__item:first-child {
+    margin-left: 0;
+}
+.product-labels__txt {
+    display: block;
+    border: 2px solid transparent;
+    font-size: 14px;
+    padding: 10px 20px;
+    padding-left: 0;
+    border-radius: 50px;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
 .modal .modal-info .info form .form-list .form-list-row .cvc input {
     width: 70px;
     text-align: center;
@@ -225,6 +361,26 @@ body {
 }
 .modal .modal-info .info form .form-list .form-list-row .checkbox span {
     font-size: 0.8rem;
+}
+.next {
+    color: white;
+    font-size: 1rem;
+    margin-left: 1rem;
+    padding: 0.8rem 2.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: #101979;
+    background-image: linear-gradient(-45deg, #141f94 0%, #0dbb87 100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+.next:hover {
+    background-color: #1926b4;
+    background-image: linear-gradient(-45deg, #0b8d66 0%, #0e1564 100%);
+    transition: 1s;
 }
 .modal .modal-info .info form button {
     color: white;

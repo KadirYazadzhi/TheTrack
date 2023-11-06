@@ -314,6 +314,7 @@ a {
 .product-slider__item.swiper-slide-active .product-slider__content > *:nth-child(15) {
     transition-delay: 2.8s;
 }
+
 .product-slider__item.swiper-slide-active circle {
     animation: progress 1s ease-out forwards;
     animation-delay: 0.5s;
