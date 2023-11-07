@@ -5,6 +5,17 @@
 
 }
 
+
+
+.rate i, .rate i:hover ~ i {
+    color: #fc0;
+    text-shadow: none;
+    transition: color 200ms,
+    text-shadow 200ms;
+    transition-delay: 0;
+}
+
+
 /* Стил на офертите и цените (може да се добави по-късно) */
 .offer {
     border: 1px solid #ccc;
@@ -37,9 +48,10 @@
 
 .btn-primary {
     display: inline-block;
-    background-color: #ff6600;
+    background: rgb(2,170,189);
+    background: linear-gradient(45deg, rgba(2,170,189,1) 35%, rgba(0,205,172,1) 62%);
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
@@ -47,7 +59,8 @@
 }
 
 .btn-primary:hover {
-    background-color: #e65100;
+    background: rgb(137,141,255);
+    background: linear-gradient(45deg, rgba(137,141,255,1) 30%, rgba(113,236,255,1) 57%);
 }
 
 .hero img {
@@ -148,9 +161,9 @@
     margin: 20px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 7px;
     background-color: #f9f9f9;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px rgba(0, 8, 148, 0.4);
     transition: transform 0.3s ease;
 }
 
@@ -191,6 +204,7 @@
 .our-clients  {
     text-align: center;
     margin: 50px 0;
+
 }
 
 .our-clients h2  {
@@ -207,6 +221,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+
 
 }
 
@@ -233,9 +248,18 @@
     margin: 10px;
     align-items: center;
     border-radius: 15px 10px;
-}
 
+}
+.client-logos img:hover {
+    position: relative;
+    bottom: 14px;
+
+
+}
 @media screen and (max-width: 768px) {
+
+
+
     .home-picture{
         width: 100%;
         max-width: 730px;
@@ -245,6 +269,7 @@
 
 
     }
+
     .client-logos {
         max-width: 90%;
         display: grid;
