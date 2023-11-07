@@ -47,3 +47,23 @@ nextButton.addEventListener('click', function() {
         deliveryDiv.style.display = 'block';
     }
 });
+
+
+const undoButton = document.querySelector('.undo');
+
+// Избираме div-овете с клас "info" и "delivery-modal"
+const info = document.querySelector('.info');
+const delivery = document.querySelector('.delivery-modal');
+
+// Добавяме събитие "click" на бутона
+undoButton.addEventListener('click', function() {
+    // Смяна на стиловете на div-овете
+    if (info.style.display === 'block' || info.style.display === '') {
+        info.style.display = 'none';
+        delivery.style.display = 'block';
+    } else {
+        info.style.display = 'block';
+        delivery.style.display = 'none';
+    }
+});
+
