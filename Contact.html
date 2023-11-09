@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="Style/Navbar.css">
   <link rel="stylesheet" href="Style/Footer.css">
   <link rel="stylesheet" href="Style/Animation.css">
-
+  <script
+          src="https://kit.fontawesome.com/64d58efce2.js"
+          crossorigin="anonymous"
+  ></script>
 </head>
 <body>
 <html>
@@ -36,54 +39,85 @@
   </ul>
 
 </nav>
-<div class="background">
-  <div class="container">
-    <div class="screen">
-      <div class="screen-header">
-        <div class="screen-header-left">
-          <div class="screen-header-button close"></div>
-          <div class="screen-header-button maximize"></div>
-          <div class="screen-header-button minimize"></div>
+
+
+
+<div class="container">
+
+  <div class="form">
+    <div class="contact-info">
+      <h3 class="title">Контакт с нас</h3>
+      <p class="text">
+        Ако имате въпроси към нас не се колебайте да ни пишете, с удоволствие ше отговорим на вашите въпроси.
+      </p>
+
+      <div class="info">
+        <div class="information">
+
+          <p>thetrack@abv.bg</p>
         </div>
-        <div class="screen-header-right">
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
-          <div class="screen-header-ellipsis"></div>
+        <div class="information">
+
+          <p>гр. Благоевград 2700, жк Ален Мак ул. „Борис Ангелушев“</p>
+        </div>
+        <div class="information">
+
+          <p>089 123 4567</p>
         </div>
       </div>
-      <div class="screen-body">
-        <div class="screen-body-item left">
-          <div class="app-title">
-            <span>CONTACT</span>
-            <span>US</span>
-          </div>
-          <div class="app-contact">CONTACT INFO : thetrack@abv.bg</div>
-        </div>
-        <div class="screen-body-item">
-          <div class="app-form">
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="NAME" >
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="EMAIL">
-            </div>
-            <div class="app-form-group">
-              <input class="app-form-control" placeholder="CONTACT NO">
-            </div>
-            <div class="app-form-group message">
-              <input class="app-form-control" placeholder="MESSAGE">
-            </div>
-            <div class="app-form-group buttons">
-              <button class="app-form-button">CANCEL</button>
-              <button class="app-form-button">SEND</button>
-            </div>
-          </div>
-        </div>
+
+      <div class="social-media">
+        <p>Connect with us :</p>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div><br>
+
       </div>
     </div>
 
+    <div class="contact-form">
+      <span class="circle one"></span>
+      <span class="circle two"></span>
+
+      <form action="index.html" autocomplete="off">
+        <h3 class="title">Contact us</h3>
+        <div class="input-container">
+          <input type="text" name="name" class="input"  />
+          <label for="">Username</label>
+          <span>Username</span>
+        </div>
+        <div class="input-container">
+          <input type="email" name="email" class="input" />
+          <label for="">Email</label>
+          <span>Email</span>
+        </div>
+        <div class="input-container">
+          <input type="tel" name="phone" class="input" />
+          <label for="">Phone</label>
+          <span>Phone</span>
+        </div>
+        <div class="input-container textarea">
+          <textarea name="message" class="input"></textarea>
+          <label for="">Message</label>
+          <span>Message</span>
+        </div>
+        <input type="submit" value="Send" class="btn" />
+      </form>
+    </div>
   </div>
 </div>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!--GOOGLE FONTS-->
@@ -123,4 +157,5 @@
 
 </body>
 <script type="text/javascript" src="Script/Navbar.js"></script>
+<script type="text/javascript" src="Script/Contact.js"></script>
 </html>
