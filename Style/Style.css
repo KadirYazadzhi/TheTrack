@@ -4,6 +4,73 @@
 
 
 }
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+
+.home-picture {
+
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+.animate-img {
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 110px;
+    left: 1000px;
+    z-index: 10;
+    box-shadow: 3px 3px 10px #0b8d66;
+
+
+  }
+/* Стилове за модалния прозорец */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+
+
+}
+
+.modal-content img {
+    width: 100%;
+    height: 100%;
+
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
 .box {
     display: block;
     width: 100%;
@@ -208,7 +275,7 @@
 }
 
 .hero-content {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -285,7 +352,7 @@
 }
 
 .hero-content {
-    z-index: 2;
+    z-index: 1;
     position: relative;
     animation: slide-in 1s ease-in-out;
 }
@@ -428,7 +495,7 @@
 }
 .client-logos img:hover {
     position: relative;
-    bottom: 14px;
+    transform: scale(1.1);
 
 
 }
@@ -483,5 +550,10 @@
     .our-clients p {
         font-size: 1.1em;
         margin: 20px 0;
+    }
+    .modal-content {
+        top: 200px;
+        width: 100%;
+        height: 100%;
     }
 }
