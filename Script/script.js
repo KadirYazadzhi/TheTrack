@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const modal = document.createElement("div");
     modal.className = "modal";
@@ -39,3 +47,5 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
