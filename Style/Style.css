@@ -187,7 +187,7 @@
     position: absolute;
     height: 5px;
     background: #4854d9;
-    width: 35px;
+    width: 70px;
     top: -0.75rem;
     border-radius: 3px;
 }
@@ -200,6 +200,7 @@
         max-width: 95%;
         height: 300px;
     }
+
     .blog-card .meta {
         flex-basis: 40%;
         height: auto;
@@ -258,6 +259,8 @@
     .blog-p {
         font-size: 1.1em;
     }
+
+
 }
 
 .font {
@@ -410,8 +413,7 @@
 }
 @media only screen and (max-width: 768px) {
     .home-picture-container,
-    .novini,
-    .blog {
+    .novini{
         height: auto;
     }
 
@@ -420,15 +422,18 @@
     .blog {
         padding: 10px;
     }
-    .blog {
+    .blog, .cards {
         display: grid;
         grid-template-columns: repeat(1, 1fr); /* един стълб с равни ширина */
         gap: 10px;
+        height: 100%;
 
     }
 .card {
     padding: 10px;
-
+    width: 90%;
+    margin: 20px;
+   
 }
     .blog-card {
         height: auto;
@@ -985,7 +990,7 @@
     .home-phone {
         width: 100%;
         max-width: 730px;
-        max-height: 330px;
+        max-height: 350px;
         content: url("https://th.bing.com/th/id/OIG.nLJC1TkQMKBAMsOLh_Oh?pid=ImgGn");
 
     }
