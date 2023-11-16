@@ -103,8 +103,7 @@
 <div class="parent">
     <div class="home-picture-container">
         <img class="home-picture active" src="Снимки/home-2.jpg" alt="Начало" id="Home1">
-        <img class="home-picture" src="Снимки/home-page-2.jpg" alt="Начало" id="Home2">
-        <img class="home-picture" src="Снимки/home-page-3.jpg" alt="Начало" id="Home3">
+
 
     </div>
 </div>
@@ -112,20 +111,7 @@
     <img class="home-phone" src="Снимки/home-phone.jpeg">
 
 </div>
-<script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.home-picture');
 
-    setInterval(function () {
-        images[currentIndex].style.opacity = '0';
-        images[currentIndex].classList.remove('active');
-
-        currentIndex = (currentIndex + 1) % images.length;
-
-        images[currentIndex].style.opacity = '1';
-        images[currentIndex].classList.add('active');
-    }, 5000);
-</script>
     <section class="about-us">
         <h2>За Нас</h2>
         <p>Ние сме водеща компания в областта на картинг състезанията в България. Със собствена състезателна писта и екип от професионалисти, предлагаме най-доброто преживяване за нашите клиенти.</p>
