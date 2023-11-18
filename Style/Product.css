@@ -64,7 +64,8 @@ body {
     top: -50%;
     width: 100%;
     height: 100%;
-    background: #17238d;
+    background: rgb(33,53,227);
+    background: linear-gradient(90deg, rgba(33,53,227,1) 0%, rgba(24,40,173,1) 35%, rgba(21,32,127,1) 100%);
     transform: skewY(345deg);
     transition: 0.5s;
 
@@ -133,12 +134,18 @@ body {
     margin-top: 15px;
     color: #000000;
     text-decoration: none;
-    background: #003cff;
+    background: rgb(0,237,255);
+    background: linear-gradient(90deg, rgb(0, 237, 255) 0%, rgba(0,60,255,1) 50%, rgba(0,36,153,1) 100%);
     border-radius: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: 0.5s;
     box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.09), 0 0 8px #000bbb;
+}
+.card .contentBox .buy:hover {
+   color: white;
+    background: rgb(0,237,255);
+    background: linear-gradient(90deg, rgb(1, 42, 176) 0%, rgb(17, 73, 255) 50%, rgb(16, 237, 253) 100%);
 }
 
 .card:hover .contentBox .buy {

@@ -1,6 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+*{
+    font-family: "Istok Web", sans-serif;
+}
 
+.black-friday {
+    width: 100%;
+}
+.promotion {
+    display: block; /* По подразбиране се показва на всички устройства */
+}
+
+.promotion-phone {
+    display: none; /* По подразбиране се скрива на всички устройства */
+}
+
+/* Медийна заявка за устройства с ширина по-голяма от 768px (например, компютри) */
+@media screen and (min-width: 768px) {
+    .promotion {
+        display: block; /* Показва се на компютри */
+    }
+
+    .promotion-phone {
+        display: none; /* Скрива се на компютри */
+    }
+}
+
+/* Медийна заявка за устройства с ширина по-малка или равна на 768px (например, телефони) */
+@media screen and (max-width: 768px) {
+    .promotion {
+        display: none; /* Скрива се на телефони */
+    }
+
+    .promotion-phone {
+        display: block; /* Показва се на телефони */
+    }
+}
 
 
 
@@ -262,7 +297,6 @@
     .blog-p {
         font-size: 1.1em;
     }
-
 
 }
 
