@@ -4,39 +4,6 @@
     font-family: "Istok Web", sans-serif;
 }
 
-.black-friday {
-    width: 100%;
-}
-.promotion {
-    display: block; /* По подразбиране се показва на всички устройства */
-}
-
-.promotion-phone {
-    display: none; /* По подразбиране се скрива на всички устройства */
-}
-
-/* Медийна заявка за устройства с ширина по-голяма от 768px (например, компютри) */
-@media screen and (min-width: 768px) {
-    .promotion {
-        display: block; /* Показва се на компютри */
-    }
-
-    .promotion-phone {
-        display: none; /* Скрива се на компютри */
-    }
-}
-
-/* Медийна заявка за устройства с ширина по-малка или равна на 768px (например, телефони) */
-@media screen and (max-width: 768px) {
-    .promotion {
-        display: none; /* Скрива се на телефони */
-    }
-
-    .promotion-phone {
-        display: block; /* Показва се на телефони */
-    }
-}
-
 
 
 .parent {
