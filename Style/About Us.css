@@ -576,6 +576,13 @@ object-fit: fill;
 }
 
 @media (max-width: 768px) {
+    .parent {
+        width: 100%;
+        height: 484px;
+    }
+    .right {
+        margin-left: 365px;
+    }
     .responsive-container-block.textSide {
         width: 100%;
         align-items: center;

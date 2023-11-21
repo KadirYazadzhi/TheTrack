@@ -32,7 +32,7 @@ sendBtn.addEventListener('click', (e) => {
     heartImage.src = 'Снимки/heart.png'; // Пътят до изображението
     heartImage.alt = 'Heart Image';
     panel.appendChild(heartImage);
-    heartImage.style = 'width: 100px'
+    heartImage.style = 'width: 70px'
 
 })
 

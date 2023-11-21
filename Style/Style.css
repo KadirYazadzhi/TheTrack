@@ -11,7 +11,7 @@
 
 .panel-container {
     background-color: #12192c;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 10px rgba(0, 85, 255, 0.5);
     border-radius: 15px;
     font-size: 90%;
     display: flex;
@@ -28,6 +28,8 @@
 
 .panel-container strong {
     line-height: 20px;
+    font-size: 20px;
+    padding: 10px;
 }
 
 .ratings-container {
@@ -70,7 +72,7 @@
     color: #000;
     border: 0;
     border-radius: 4px;
-    padding: 20px 40px;
+    padding: 20px 50px;
     cursor: pointer;
     transition: 300ms;
 }
@@ -101,6 +103,7 @@
 
 .panel-container strong {
     line-height: 20px;
+    font-size: 14px;
 }
 
 .ratings-container {
@@ -127,19 +130,6 @@
     margin: 5px 10px;
 }
 
-.btn {
-    background: rgb(143, 148, 251);
-    color: #000;
-    border: 0;
-    border-radius: 4px;
-    padding: 10px 20px; /* Adjust padding for smaller screens */
-    cursor: pointer;
-    transition: 300ms;
-}
-
-.btn:hover {
-    background: rgb(59, 69, 255);
-}
 
 .btn:focus {
     outline: 0;
