@@ -1,51 +1,47 @@
 
+const ratings = document.querySelectorAll('.rating')
+const ratingsContainer = document.querySelector('.ratings-container')
+const sendBtn = document.querySelector('#send')
+const panel = document.querySelector('#panel')
+let selectedRating = 'Satisfied'
+
+ratingsContainer.addEventListener('click', (e) => {
+    if(e.target.parentNode.classList.contains('rating')) {
+        removeActive()
+        e.target.parentNode.classList.add('active')
+        selectedRating = e.target.nextElementSibling.innerHTML
+    }
+    if(e.target.classList.contains('rating')) {
+        removeActive()
+        e.target.classList.add('active')
+        selectedRating = e.target.nextElementSibling.innerHTML
+    }
+
+})
+
+sendBtn.addEventListener('click', (e) => {
+    panel.innerHTML = `
+        
+        Thank You!
+        
+        Feedback : ${selectedRating}
+        We'll use your feedback to improve our customer support
+    `
+    // Добавяне на изображението
+    const heartImage = document.createElement('img');
+    heartImage.src = 'Снимки/heart.png'; // Пътят до изображението
+    heartImage.alt = 'Heart Image';
+    panel.appendChild(heartImage);
+    heartImage.style = 'width: 100px'
+
+})
+
+function removeActive() {
+    for(let i = 0; i < ratings.length; i++) {
+        ratings[i].classList.remove('active')
+    }
+}
 
 
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.createElement("div");
-    modal.className = "modal";
-    document.body.appendChild(modal);
-
-    const modalContent = document.createElement("div");
-    modalContent.className = "modal-content";
-    modal.appendChild(modalContent);
-
-    const closeBtn = document.createElement("span");
-    closeBtn.className = "close";
-    closeBtn.innerHTML = "&times;";
-    modalContent.appendChild(closeBtn);
-
-    const imgThumbnails = document.querySelectorAll(".ImgThumbnail");
-    imgThumbnails.forEach(function(thumbnail) {
-        thumbnail.addEventListener("click", function() {
-            modal.style.display = "block";
-            const img = document.createElement("img");
-            img.src = this.src;
-            modalContent.innerHTML = "";
-            modalContent.appendChild(img);
-        });
-    });
-
-    closeBtn.addEventListener("click", function() {
-        modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape" || event.key === "Esc") {
-            modal.style.display = "none";
-        }
-    });
-});
 
 
