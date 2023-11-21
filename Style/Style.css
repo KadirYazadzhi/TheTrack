@@ -74,7 +74,7 @@
     border-radius: 4px;
     padding: 20px 50px;
     cursor: pointer;
-    transition: 300ms;
+    transition: 700ms;
 }
 .btn:hover {
     background: rgb(59,69,255);
@@ -207,9 +207,9 @@
     position: absolute;
     content: ' ';
     display: block;
-    width: 160px;
-    height: 160%;
-    background: linear-gradient(90deg, transparent, #3700ff, #0800ff, #0208fd, #2052f3, transparent);
+    width: 300px;
+    height: 170%;
+    background: linear-gradient(90deg, transparent, #8c00ff, #5e00ff, #0208fd, #1649ff, transparent);
     animation: rotation_481 5000ms infinite linear;
 }
 
