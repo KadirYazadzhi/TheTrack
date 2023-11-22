@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Track">
+  <meta name="keywords" content="The Track, Track, Kart, Karting, Картинг, Картове, Писти, Оборудване за картинг">
+  <meta name="author" content="Kadir Yazadzhi">
+  <link rel="icon" href="Снимки/home-logo-official.png" type="image/x-icon" >
+  <meta http-equiv="content-language" content="bg">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="The Track">
+  <meta property="og:description" content="The Track is an educational training company for the sale of karting equipment and the rental of tracks">
+  <meta property="og:image" content="Снимки/home-logo-official.png">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <title>Silver box</title>
+  <link  rel="stylesheet" href="Style/Product-New.css">
+
+</head>
+<body oncontextmenu="return false;" onselectstart="return false">
+<style>
+  .color-choose input[type="radio"]#red + label span {
+    background-color: #ffffff;
+  }
+  .color-choose input[type="radio"]#blue + label span {
+    background-color: #000000;
+  }
+  .color-choose input[type="radio"]#black + label span {
+    background-color: #00e3ff;
+  }
+
+  .info-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  .visible-text-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0a2a46;
+  }
+  .visible-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0a2a46;
+  }
+  .visible-text-red {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ff0000;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const imageContainer = document.querySelector('.left-column');
+    const infoDiv = document.getElementById('infoDiv');
+
+    imageContainer.addEventListener('mouseover', function () {
+      infoDiv.style.display = 'block';
+    });
+
+    imageContainer.addEventListener('mouseout', function () {
+      infoDiv.style.display = 'none';
+    });
+
+    imageContainer.addEventListener('mousemove', function (event) {
+      // Можете да настроите позицията на div спрямо позицията на курсора
+      infoDiv.style.top = event.clientY + 'px';
+      infoDiv.style.left = event.clientX + 'px';
+    });
+  });
+</script>
+<a href="Product.html#promo-box-1"><img class="arrow" src="Снимки/arrow.png" ></a>
+<main class="container">
+
+  <!-- Left Column / Headphones Image -->
+  <div class="left-column">
+    <img data-image="black" src="Image/promo-box-1.png" alt="">
+    <div class="info-container" id="infoDiv">
+      <p class="visible-text-title">Какво включва пакета:</p>
+      <ul> <p class="visible-text" >Каска - Bell KC-7 CMR Fernando Alonso</p> </ul>
+      <ul><p class="visible-text">Гащеризон - Sparco Competition Vintage</p> </ul>
+      <ul> <p class="visible-text">Ръкавици - Minus273 Shaolin</p> </ul>
+      <ul><p class="visible-text">Обувки - Sparco K-Formula</p> </ul>
+      <ul> <p class="visible-text-red">Подарък - Предпазна кора OMP KS-1 Pro  </p> </ul>
+    </div>
+  </div>
+
+
+  <!-- Right Column -->
+  <div class="right-column">
+
+    <!-- Product Description -->
+    <div class="product-description">
+      <span>Кутии</span>
+      <h1>Silver Box</h1>
+      <span class="rate" style="font-size: 30px"><i>★</i><i>★</i><i>★</i><i>★</i><i>★</i></span>
+      <p>Изберете нас. Купете висококачествено оборудване за картинг от доставчик. Най добрите в съотношение цена-качество.</p>
+    </div>
+
+    <!-- Product Configuration -->
+    <div class="product-configuration">
+
+      <!-- Product Color -->
+      <div class="product-color">
+        <span>Color</span>
+
+        <div class="color-choose">
+          <div>
+            <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+            <label for="red"><span></span></label>
+          </div>
+          <div>
+            <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+            <label for="blue"><span></span></label>
+          </div>
+          <div>
+            <input data-image="black" type="radio" id="black" name="color" value="black">
+            <label for="black"><span></span></label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cable Configuration -->
+      <div class="cable-config">
+        <span>Sizes</span>
+
+        <div class="cable-choose">
+          <button>Small</button>
+          <button>Medium</button>
+          <button>Large</button>
+        </div>
+
+        <a href="#">При проблем се обърнете към нас</a>
+
+      </div>
+    </div>
+
+    <div class="and">
+      <img class="icon-image" src="Снимки/credit-card.png"> <a class="icon-text">20% Cashback</a>
+    </div>
+    <div class="and">
+      <img class="icon-image" src="Снимки/fast-delivery.png"> <a class="icon-text">Free Shipping</a>
+    </div>
+
+
+    <!-- Product Pricing -->
+    <div class="product-price">
+      <span>3 899.<small>99</small>лв.</span>
+      <a href="Payment%20form.html" class="cart-btn">Купи веднага</a>
+    </div>
+  </div>
+</main>
+</body>
+</html>
