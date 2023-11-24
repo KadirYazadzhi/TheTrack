@@ -1,0 +1,228 @@
+#doubleClickModal-ZampRZ-42 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content-ZampRZ-42 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content-ZampRZ-42 p {
+    margin-bottom: 20px;
+}
+
+#acceptButton-ZampRZ-42, #cancelButton-ZampRZ-42 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#acceptButton-ZampRZ-42 {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#cancelButton-ZampRZ-42 {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#acceptButton-ZampRZ-42:hover, #cancelButton-ZampRZ-42:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+#doubleClickModal-Minus273-Drip {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content-Minus273-Drip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content-Minus273-Drip p {
+    margin-bottom: 20px;
+}
+
+#acceptButton-Minus273-Drip, #cancelButton-Minus273-Drip {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#acceptButton-Minus273-Drip {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#cancelButton-Minus273-Drip {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#acceptButton-Minus273-Drip:hover, #cancelButton-Minus273-Drip:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+#doubleClickModal-OMP-One-Art {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content-OMP-One-Art {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content-OMP-One-Art p {
+    margin-bottom: 20px;
+}
+
+#acceptButton-OMP-One-Art, #cancelButton-OMP-One-Art {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#acceptButton-OMP-One-Art {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#cancelButton-OMP-One-Art {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#acceptButton-OMP-One-Art:hover, #cancelButton-OMP-One-Art:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+#doubleClickModal-Alpinestars-Kaze-Tech-1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content-Alpinestars-Kaze-Tech-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content-Alpinestars-Kaze-Tech-1 p {
+    margin-bottom: 20px;
+}
+
+#acceptButton-Alpinestars-Kaze-Tech-1, #cancelButton-Alpinestars-Kaze-Tech-1 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#acceptButton-Alpinestars-Kaze-Tech-1 {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+#cancelButton-Alpinestars-Kaze-Tech-1 {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#acceptButton-Alpinestars-Kaze-Tech-1:hover, #cancelButton-Alpinestars-Kaze-Tech-1:hover {
+    opacity: 0.8;
+}
+
+.small {
+    font-size: 12px;
+    text-align: center;
+    color: #afafaf;
+
+}
+
+
