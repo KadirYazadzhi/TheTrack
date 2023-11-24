@@ -11,8 +11,15 @@ body,
 input,
 textarea {
     font-family: "Poppins", sans-serif;
-}
 
+}
+.contact-section {
+    position: relative;
+    padding: 20px;
+    height: 100px;
+    width: 100%;
+    color: #FFFFFF;
+}
 .container {
     position: relative;
     width: 100%;

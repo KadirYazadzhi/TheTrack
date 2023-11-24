@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Track">
+  <meta name="keywords" content="The Track, Track, Kart, Karting, Картинг, Картове, Писти, Оборудване за картинг">
+  <meta name="author" content="Kadir Yazadzhi">
+  <link rel="icon" href="Снимки/home-logo-official.png" type="image/x-icon" >
+  <meta http-equiv="content-language" content="bg">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="The Track">
+  <meta property="og:description" content="The Track is an educational training company for the sale of karting equipment and the rental of tracks">
+  <meta property="og:image" content="Снимки/home-logo-official.png">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <title>Checkout Form</title>
+  <link rel="stylesheet" href="/Style/Checkout%20Form.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body oncontextmenu="return false;" onselectstart="return false">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+<div class="modal clearfix">
+  <div class="modal-product">
+    <div class="product">
+      <!-- Slideshow container -->
+      <div class="product-slideshow">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="productSlides fade">
+          <img src="Image/Bell-RS7-Pro-1.png" style="width:100%">
+        </div>
+        <div class="productSlides fade">
+          <img src="Image/Bell-RS7-Pro-2.png" style="width:100%">
+        </div>
+        <div class="productSlides fade">
+          <img src="Image/Bell-RS7-Pro-3.png" style="width:100%">
+        </div>
+        <div class="productSlides fade">
+          <img src="Image/Bell-RS7-Pro-4.png" style="width:100%">
+        </div>
+        <div class="productSlides fade">
+          <img src="Image/Bell-RS7-Pro-5.png" style="width:100%">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+
+
+        </div>
+
+      </div>
+
+      <h1 class="product-name">
+        Bell <br> RS7
+      </h1>
+      <p class="product-code-name">
+        167639419
+      </p>
+      <p class="product-price">
+        1 700.<small>00</small> лв.
+      </p>
+
+    </div>
+
+    <div class="round-shape"></div>
+  </div>
+  <div class="modal-info">
+
+    <div id="circle">
+      <a class="link"  href="#"><div><img class="arrow" src="Image/right-arrow.png"></div></a>
+    </div>
+
+    <div class="info" style="display: none">
+      <h2>Payment Information</h2>
+      <form action="#">
+        <ul class="form-list">
+          <li class="form-list-row">
+            <div class="user">
+              <label for="#">Name</label><br>
+              <i class="fas fa-user"></i></i><input type="text" required>
+            </div>
+          </li>
+          <li class="form-list-row">
+            <div class="number">
+              <label for="#">Card Number</label><br>
+              <i class="far fa-credit-card"></i><input type="text" required>
+            </div>
+          </li>
+          <li class="form-list-row clearfix">
+            <div class="date">
+              <label for="#">Expiration Date</label><br>
+              <input class="month" type="text" required placeholder="MM">
+              <input class="year" type="text" required placeholder="YY">
+            </div>
+            <div class="cvc">
+              <label for="#">CVC</label><i class="fas fa-question-circle"></i><br>
+              <input type="text" required placeholder="123">
+            </div>
+          </li>
+          <li class="form-list-row">
+            <div class="checkbox">
+              <label for="checkbox">
+                <input id="checkbox" type="checkbox">
+                <span>Remember My Information</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+        <button>Pay Now</button>
+        <button class="undo">Undo</button>
+      </form>
+    </div>
+    <div class="delivery-modal" style="display: block">
+      <div class="delivery">
+        <h2 class="title">Delivery Information</h2>
+        <form action="#">
+          <ul class="form-delivery">
+            <li class="form-delivery-row">
+              <div class="name">
+                <label for="#">Name</label><br>
+                <i class="fas fa-user"></i></i><input type="text" required>
+              </div>
+            </li>
+
+            <li class="form-delivery-row">
+              <div class="number">
+                <label for="#">Number</label><br>
+                <i class="fa fa-phone"></i><input type="text" required>
+              </div>
+            </li>
+
+            <li class="form-delivery-row">
+              <div class="city">
+                <label for="#">City</label><br>
+                <i class="fa fa-map-marker"></i><input type="text" required>
+              </div>
+            </li>
+
+            <li class="form-delivery-row">
+              <div class="street">
+                <label for="#">Street</label><br>
+                <i class="fa fa-home"></i><input type="text" required>
+              </div>
+            </li>
+            <div class="product-labels__group">
+              <li>
+                <label class="product-labels__item">
+                  <input type="radio" class="product-labels__checkbox" name="type5" checked>
+                  <span class="product-labels__txt">Speedy</span>
+                </label>
+                <label class="product-labels__item">
+                  <input type="radio" class="product-labels__checkbox" name="type5">
+                  <span class="product-labels__txt">Econt</span>
+                </label>
+              </li>
+            </div>
+          </ul>
+          <button class="next">Next</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="Script/Checkout%20Form.js"></script>
+</body>
+</html>
