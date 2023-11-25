@@ -203,7 +203,10 @@ li {
     z-index: 100;
 }
 @media (max-width: 767px) {
-
+    span.s1 {
+        max-width: 768px;
+        font-size: 10rem;
+    }
     .card.expanded-card {
         position: relative;
         box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
@@ -228,14 +231,15 @@ li {
         transition: height 0.5s ease;
     }
     .thumbnail {
-        width: 100%;
-        height: 230px;
+        width: 90%;
+        height: 200px;
+        overflow: hidden;
     }
     img.left {
         position: absolute;
         left: 0;
         top: 50%;
-
+        overflow: hidden;
         height: auto;
         -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);

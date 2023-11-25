@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    width: 60%;
+    width: 80%;
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
@@ -68,4 +68,56 @@ input[type="radio"] {
 
 #submit:hover, #cancel:hover {
     opacity: 0.8;
+}
+@media (max-width: 768px) {
+
+
+
+.container {
+    width: 100%; /* Увеличете ширината на контейнера за телефон */
+    margin: 10px ; /* Променете разстоянието до краищата на страницата */
+    background-color: #fff;
+    padding: 10px; /* Намалете отстъпа */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+hr {
+    border: 1px solid #ddd;
+}
+
+.license {
+    font-size: 14px; /* Намалете размера на шрифта */
+    line-height: 1.6;
+    color: #555;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px; /* Намалете горния отстъп за таблицата */
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px; /* Намалете отстъпа на клетките */
+    border: 1px solid #ddd;
+}
+
+input[type="radio"] {
+    margin-right: 3px; /* Намалете разстоянието между радио бутоните */
+}
+
+#submit, #cancel {
+    width: 100%; /* Направете бутоните на цял екран */
+    margin-top: 10px; /* Добавете отстъп между бутоните и таблицата */
+}
+
+#submit, #cancel {
+    padding: 8px 16px; /* Намалете отстъпа на бутоните */
+}
 }
