@@ -19,35 +19,12 @@
   <link href='Style/Terms%20and%20Conditions.css' rel='stylesheet' type='text/css'/>
 </head>
 <body  >
-<script type="text/javascript">
-  $(function(){
-    var btnSubmit = $('#submit');
-    btnSubmit.attr('disabled', 'disabled');
-    $('input[name=terms]').change(function(e){
-      if($(this).val() == 'agree'){
-        btnSubmit.removeAttr('disabled');
-      }else{
-        btnSubmit.attr('disabled', 'disabled');
-      }
-    });
-  });
-</script>
-<script>
-  // Получаване на референция към бутона
-  const submitButton = document.getElementById('submit');
-
-  // Добавяне на слушател за събитието "click" на бутона
-  submitButton.addEventListener('click', function() {
-    // Променете URL-а към страницата, към която искате да пренасочите потребителя
-    window.location.href = 'index.html';
-  });
-
-</script>
 <div class="container">
-  <h1 align="center">Terms and Condition!</h1><hr>
+  <h1 align="center">Terms and Conditions</h1>
+  <hr>
   <div class="license">
     Introduction
-    These Website Standard Terms and Conditions written on this webpage shall manage your use of this website. These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.
+    These Website Standard Terms and Conditions written on this webpage shall manage your use of this website. These Terms will be applied fully and affect your use of this Website. By using this Website, you agree to accept all terms and conditions written here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.
 
     <br><br>Minors or people below 18 years old are not allowed to use this Website.
   </div>
@@ -63,12 +40,36 @@
     <tr>
       <td><br/></td>
     </tr>
-    <tr>
-      <td><input type="submit" name="submit" value="Submit" id="submit"></td>
-      <td><input type="button" name="cancel" value="Cancel" id="cancel"></td>
-    </tr>
+    <form id="myForm">
+      <table>
+        <tr>
+          <td><button type="button" id="submit">Submit</button></td>
+          <td><button type="button" id="cancel">Cancel</button></td>
+        </tr>
+      </table>
+    </form>
   </table>
 </div>
+
+<script>
+  // Получаване на референции към бутоните и формата
+  const submitButton = document.getElementById('submit');
+  const cancelButton = document.getElementById('cancel');
+  const myForm = document.getElementById('myForm');
+
+  // Добавяне на слушател за събитието "click" на бутона "Submit"
+  submitButton.addEventListener('click', function() {
+    // Пренасочване към index.html
+    window.location.href = 'index.html';
+  });
+
+  // Добавяне на слушател за събитието "click" на бутона "Cancel"
+  cancelButton.addEventListener('click', function() {
+    // Тук можете да добавите друго действие, ако е необходимо
+    console.log('Cancel button clicked');
+  });
+</script>
 </body>
 <script type="text/javascript" src="Script/Source%20Code.js"></script>
+<script type="text/javascript" src="Script/Terms%20and%20conditions.js"></script>
 </html>
