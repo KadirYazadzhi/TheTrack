@@ -94,7 +94,21 @@
   </script>
 
 </nav>
-
+<script>
+  function sendMail(str) {
+    var link = "kyuya_2020g@pgiblg.com" + "&subject=" + escape("This is my subject") + "&body=" + escape(str);
+    location.href = link;
+  }
+  function submit_comment() {
+    var name = document.forms["contact_form"]["name"].value;
+    var Email = document.forms["contact_form"]["email"].value;
+    var Phone = document.forms["contact_form"]["phone"].value;
+    var Message = document.forms["contact_form"]["message"].value;
+    if((name !="") && (Email !="") && (Phone !="") && (Message !="")) {
+      sendMail("HELLO");
+    }
+  }
+</script>
 <div class="contact-section"></div>
 
 <div class="container">
@@ -124,7 +138,7 @@
       <div class="social-media">
         <p>Connect with us :</p>
         <div class="social-icons">
-          <a href="#">
+          <a href="https://www.facebook.com/profile.php?id=61553233856139">
             <i class="fab fa-facebook-f"></i>
           </a>
           <a href="#">
@@ -145,7 +159,7 @@
       <span class="circle one"></span>
       <span class="circle two"></span>
 
-      <form action="index.html" autocomplete="off">
+      <form autocomplete="off" action="mailto:kyuya_2020g@pgiblg.com" method="post" enctype="text/plain">
         <h3 class="title">Contact us</h3>
         <div class="input-container">
           <input type="text" name="name" class="input"  />
@@ -167,7 +181,7 @@
           <label for="">Message</label>
           <span>Message</span>
         </div>
-        <input type="submit" value="Send" class="btn" />
+        <input type="submit" value="Send" class="btn" onclick="submit_comment()" />
       </form>
     </div>
   </div>
