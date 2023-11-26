@@ -4,14 +4,17 @@
     animation: fadeIn 0.5s;
 }
 body {
-
     display: grid;
     width: 100vw;
-    padding-top: 20px;
+
     margin: 0;
 }
 .gallery-phone {
     display: none;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin: 20px;
+    height: 100%;
 }
 .box {
     display: block;

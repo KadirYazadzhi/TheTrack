@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="Style/Navbar.css">
   <link rel="stylesheet" href="Style/Footer.css">
   <link rel="stylesheet" href="Style/Animation.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <script
           src="https://kit.fontawesome.com/64d58efce2.js"
           crossorigin="anonymous"
@@ -52,6 +53,45 @@
     <li class="active"><a href="Contact.html">Контакти</a></li>
     <li><a href="About%20Us.html">За нас</a></li>
   </ul>
+
+  <i class="uil uil-search search-icon" id="searchIcon"></i>
+  <div class="search-box" >
+    <i class="uil uil-search search-icon" onclick="showDropdown()"></i>
+    <input type="text" id="myInput"   onkeyup="myFunction()" placeholder="Search here..." />
+    <ul id="myUL">
+    </ul>
+  </div>
+  <script>
+    function showDropdown() {
+      var searchBar = document.getElementById("myInput");
+      var dropdown = document.getElementById("myUL");
+
+      if (searchBar.value.trim() === "") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "block";
+      }
+    }
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 
 </nav>
 
