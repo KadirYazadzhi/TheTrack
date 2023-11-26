@@ -60,7 +60,7 @@ body {
 
 .card.expanded-card  {
     display: block;
-    height: 3130px; /* Променете според вашите нужди */
+    height: 3230px; /* Променете според вашите нужди */
     transition: height 0.5s ease;
 
 }
@@ -82,7 +82,7 @@ body {
 
 .card.expanded-card .plus-box {
     opacity: 1;
-    height: 2550px; /* Променете според вашите нужди */
+    height: 2650px; /* Променете според вашите нужди */
     overflow: hidden;
     transition: opacity 0.5s ease, height 0.5s ease;
 }
@@ -225,7 +225,7 @@ li {
     }
     .card.expanded-card .plus-box {
         opacity: 1;
-        height: 2500px; /* Променете според вашите нужди */
+        height: 3700px; /* Променете според вашите нужди */
         overflow: hidden;
         transition: opacity 0.5s ease, height 0.5s ease;
     }
@@ -237,7 +237,7 @@ li {
     }
     .card.expanded-card  {
         display: block;
-        height: 3240px;
+        height: 4340px;
         transition: height 0.5s ease;
     }
     .thumbnail {
