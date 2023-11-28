@@ -312,6 +312,7 @@
         text-align: left;
         align-items: center;
         text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+        list-style-type: none;
 
     }
 
@@ -322,6 +323,7 @@
 
     .phone {
         position: relative;
+        list-style-type: none;
     }
 
     .phone-children {
@@ -330,13 +332,14 @@
         margin-top: 6px;
         top: 0;
         width: 100%; /* Размер на допълнителната кутия */
-        max-height: 530px;
+        max-height: 550px;
         background: rgb(52,216,255);
         background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
         box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
         padding: 10px;
         border-radius: 10px;
         overflow-y: scroll;
+        list-style-type: none;
     }
 
 
