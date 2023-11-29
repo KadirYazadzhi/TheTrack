@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The Track">
+    <meta name="keywords" content="The Track, Track, Kart, Karting, Картинг, Картове, Писти, Оборудване за картинг">
+    <meta name="author" content="Kadir Yazadzhi">
+    <link rel="icon" href="Снимки/home-logo-official.png" type="image/x-icon" >
+    <meta http-equiv="content-language" content="bg">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="The Track">
+    <meta property="og:description" content="The Track is an educational training company for the sale of karting equipment and the rental of tracks">
+    <meta property="og:image" content="Снимки/home-logo-official.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Допълнителни услуги</title>
+    <link rel="stylesheet" href="Style/Gift.css">
+    <link rel="stylesheet" href="Style/Navbar.css">
+    <link rel="stylesheet" href="Style/Footer.css">
+    <link rel="stylesheet" href="Style/Animation.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css'>
+</head>
+<body >
+<nav class="nav">
+    <i class="uil uil-bars navOpenBtn"></i>
+
+    <a href="index.html" class="hl"></a>
+
+    <ul id="navbar" class="nav-links">
+        <i class="uil uil-times navCloseBtn"></i>
+        <li><a href="index.html">Начало</a></li>
+        <li><a href="Karting.html">Услуги</a></li>
+        <li class="dropdown">
+            <a class="drop" href="#">Продукти</a>
+            <div class="dropdown-content">
+                <a href="Merch.html" class="drop">Мърч</a>
+                <a href="Product.html" class="drop">Оборудване за картинг</a>
+            </div>
+        </li>
+        <li><a href="Gallery.html">Галерия</a></li>
+        <li><a href="Contact.html">Контакти</a></li>
+        <li class="active"><a href="About%20Us.html">За нас</a></li>
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    </ul>
+    <i class="uil uil-search search-icon" id="searchIcon"></i>
+    <div class="search-box" >
+        <i class="uil uil-search search-icon" onclick="showDropdown()"></i>
+        <input type="text" id="myInput"   onkeyup="myFunction()" placeholder="Search here..." />
+        <ul id="myUL">
+
+        </ul>
+    </div>
+    <script>
+        function showDropdown() {
+            var searchBar = document.getElementById("myInput");
+            var dropdown = document.getElementById("myUL");
+
+            if (searchBar.value.trim() === "") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</nav>
+
+
+<section class="section-box">
+    <div class="toggle">
+        <label>Месец</label>
+        <div class="toggle-btn">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label class="sub" id="sub" for="checkbox">
+                <div class="circle"></div>
+            </label>
+        </div>
+        <label>Година</label>
+    </div>
+
+    <div class="cards">
+        <div class="card shadow">
+            <ul class="price-ul">
+                <img class="logo-img"  src="Image/bronze.png" >
+                <li class="pack"> Bronze</li>
+                <li id="basic" class="price bottom-bar">100 лв.</li>
+                <li class="bottom-bar">4 часа на писта/ месец</li>
+                <li class="bottom-bar">Включено оборудване (нисък клас)</li>
+                <li class="bottom-bar">Достъп до един го-карт</li>
+                <li class="bottom-bar">5 безплатни урока</li>
+                <li><button  onclick="openModal()" class="btn">Запази</button></li>
+            </ul>
+
+        </div>
+        <div class="card active">
+            <ul class="price-ul">
+                <img class="logo-img"  src="Image/diamond.png" >
+                <li class="pack">Diamond</li>
+                <li id="professional" class="price bottom-bar">300 лв.</li>
+                <li class="bottom-bar">Неограничени часове на писта/ месец</li>
+                <li class="bottom-bar">Включено оборудване (висок клас)</li>
+                <li class="bottom-bar">Достъп до всички го-картове</li>
+                <li class="bottom-bar">50 безплатни урока</li>
+                <li class="bottom-bar">Достъп до всички събития без заплащане</li>
+                <li class="bottom-bar">VIP места на всички състезания</li>
+                <li><button  onclick="openModal()" class="btn active-btn">Запази</button></li>
+            </ul>
+        </div>
+        <div class="card shadow">
+            <ul class="price-ul">
+                <img class="logo-img"  src="Image/golden.png" >
+                <li class="pack">Gold</li>
+                <li id="master" class="price bottom-bar">170 лв.</li>
+                <li class="bottom-bar">10 часа на писта/ месец</li>
+                <li class="bottom-bar">Включено оборудване (среден клас)</li>
+                <li class="bottom-bar">Достъп до два го-карта</li>
+                <li class="bottom-bar">15 безплатни урока</li>
+                <li><button  onclick="openModal()" class="btn">Запази</button></li>
+            </ul>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p>Тази услуга може да се заяви само във физически обект.</p>
+                <button onclick="closeModal()">Затвори</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+
+<footer>
+
+    <div class="footer">
+        <div class="row">
+            <a href="https://www.facebook.com/profile.php?id=61553233856139"><i class="fa fa-facebook"></i></a>
+            <a href="https://instagram.com/the_track11?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-instagram"></i></a>
+
+        </div>
+
+
+
+        <div class="row">
+            <ul>
+                <li><a href="Our%20Services.html">Our Services</a></li>
+                <li><a href="Privacy%20Policy.html">Privacy Policy</a></li>
+                <li><a href="Terms%20and%20Conditions.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <a class="buttonaAnimation" href="index.html">
+            <button   class="button" data-text="Awesome">
+                <span class="actual-text">&nbsp;TheTrack&nbsp;</span>
+                <span aria-hidden="true" class="hover-text">&nbsp;TheTrack&nbsp;</span>
+            </button>
+        </a>
+        <div class="row">
+            Copyright © 2023 - All rights reserved || Designed By: Kadir
+        </div>
+    </div>
+</footer>
+</body>
+<script src="Script/Gift.js"></script>
+<script type="text/javascript" src="Script/Navbar.js"></script>
+</html>
