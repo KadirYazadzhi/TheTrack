@@ -67,3 +67,7 @@ function closeModalVoucherNew() {
     var Newmodal = document.getElementById('popupBox');
     Newmodal.style.display = 'none';
 }
+function closeModalVoucherNewE() {
+    var modal = document.getElementById('myModalVoucher');
+    modal.style.display = 'none';
+}
