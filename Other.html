@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="Style/Footer.css">
     <link rel="stylesheet" href="Style/Animation.css">
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body >
 <nav class="nav">
@@ -141,13 +143,39 @@
         </div>
         <div id="myModal" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
+                <span class="closeOld" onclick="closeModal()">&times;</span>
                 <p>Тази услуга може да се заяви само във физически обект.</p>
                 <button onclick="closeModal()">Затвори</button>
             </div>
         </div>
     </div>
 </section>
+<div class="popupBox" id="popupBox">
+    <div class="popupBox__content">
+        <button class="close" onclick="closeModalVoucher()"></button>
+        <div class="popupBox__img">
+            <img src="https://cdn.pixabay.com/photo/2021/09/21/02/48/gift-6642306__480.png" alt="" />
+        </div>
+        <div class="popupBox__contentTwo">
+            <div>
+                <h3 class="popupBox__title">Ваучери за</h3>
+                <h2 class="popupBox__titleTwo">до 50%<br><span>намаления</span></h2>
+                <p class="popupBox__description">
+                    Чрез нашите три ваучера вие получавате до 50% отстъпка от всички наши продукти
+                </p>
+                <a href="#" onclick="openModalVoucherNew()" class="popupBox__btn">Получи ваучер</a>
+
+            </div>
+        </div>
+    </div>
+    <div id="myModalVoucher" class="modalNew">
+        <div class="modal-contentNew">
+            <span class="closeNew" onclick="closeModalVoucherNew()">&times;</span>
+            <p>Можете да се сдобиете с нашите ваучери на официалните събития на които ще присътваме - панаири в Пловдив и Благоевград.</p>
+            <button class="btnNew" onclick="closeModalVoucherNew()">Затвори</button>
+        </div>
+    </div>
+</div>
 <!--FONT AWESOME-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
