@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var cartIcon = document.getElementById('cartIcon');
+    var navBar = document.querySelector('.nav');
+
+    function hideCartIcon() {
+        cartIcon.style.display = 'none';
+    }
+
+    function showCartIcon() {
+        cartIcon.style.display = 'block';
+    }
+
+    function isMobileScreen() {
+        return window.innerWidth < 768;
+    }
+
+    function updateCartIconVisibility() {
+        if (isMobileScreen() && !navBar.classList.contains('openNav')) {
+            hideCartIcon();
+        } else {
+            showCartIcon();
+        }
+    }
+
+    window.addEventListener('load', updateCartIconVisibility);
+    window.addEventListener('resize', updateCartIconVisibility);
+
+    navBar.addEventListener('transitionend', updateCartIconVisibility);
+
+    cartIcon.addEventListener('click', function () {
+        if (isMobileScreen()) {
+            navBar.classList.toggle('openNav');
+            updateCartIconVisibility();
+        }
+    });
+});
+
+
+
+
+
 const nav = document.querySelector(".nav"),
     searchIcon = document.querySelector("#searchIcon"),
     navOpenBtn = document.querySelector(".navOpenBtn"),

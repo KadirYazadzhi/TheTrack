@@ -234,6 +234,24 @@ a {
     }
 }
 @media screen and (max-width: 768px) {
+    .nav {
+        transition: right 1.5s ease;
+    }
+
+    #cartIcon {
+        display: none;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+    }
+
+    .nav.openNav {
+        right: 0;
+    }
+
+    .nav.openNav #cartIcon {
+        opacity: 1;
+    }
+
     .nav .navOpenBtn,
     .nav .navCloseBtn {
         display: block;

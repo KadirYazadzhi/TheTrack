@@ -16,6 +16,7 @@
     <meta charset="UTF-8">
     <title>Product</title>
   <link rel="stylesheet" href="Style/Navbar.css">
+  <link rel="stylesheet" href="Style/Cart.css">
   <link rel="stylesheet" href="Style/Product.css">
   <link rel="stylesheet" href="Style/Footer.css">
   <link rel="stylesheet" href="Style/Footer.css">
@@ -23,8 +24,8 @@
   <link rel="stylesheet" href="Style/Search%20bar.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
-<body oncontextmenu="return false;" onselectstart="return false" >
-<nav class="nav">
+<body  >
+<nav id="navbar-phone" class="nav">
   <i class="uil uil-bars navOpenBtn"></i>
 
   <a href="index.html" class="hl"></a>
@@ -44,6 +45,18 @@
     <li><a href="Contact.html">Контакти</a></li>
     <li><a href="About%20Us.html">За нас</a></li>
   </ul>
+  <div id="cartIcon"><img class="logo-cart" src="Image/shopping-cart.png"> </div>
+  <div id="cart">
+    <div id="closeCart">&#10006;</div>
+    <h2>Shopping Cart</h2>
+    <div id="cartContent"></div>
+    <div id="totalPrice">Total: 0.00 лв.</div>
+    <button id="checkoutBtn">Checkout</button>
+    <button id="cancelBtn">Cancel</button>
+  </div>
+
+
+
 
   <i class="uil uil-search search-icon" id="searchIcon"></i>
   <div class="search-box">
@@ -344,6 +357,7 @@
 <div class="box-product">
 </div>
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart1">
   <a id="Sparco Club J-1"></a>
   <div class="imgBox">
     <img src="Снимки/kaska-6.png" alt="mouse corsair" class="mouse">
@@ -358,6 +372,7 @@
 </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart2">
     <a id="Club X1"></a>
   <div class="imgBox">
     <img src="Снимки/kaska-2.png" alt="mouse corsair" class="mouse">
@@ -371,6 +386,7 @@
 </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart3">
     <a id="OMP Circuit Evo"></a>
     <div class="imgBox">
       <img src="Image/OMP-Circuit-Evo-1.png" alt="mouse corsair" class="mouse">
@@ -384,6 +400,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart4">
     <a id="Zamp RZ42"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-10.png" alt="mouse corsair" class="mouse">
@@ -397,6 +414,7 @@
 </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart5">
     <a id="OMP J-Rally Hans FIA"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-3.png" alt="mouse corsair" class="mouse">
@@ -410,6 +428,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart6">
     <a id="GP KF-4W CMR"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-1.png" alt="mouse corsair" class="mouse">
@@ -424,6 +443,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart7">
     <a id="Arai CK-6"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-12%20.png" alt="mouse corsair" class="mouse">
@@ -438,6 +458,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart8">
     <a id="RRC Protect CMR"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-5.png" alt="mouse corsair" class="mouse">
@@ -452,6 +473,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart9">
     <a id="Sparco RJ-I FIA"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-4.png" alt="mouse corsair" class="mouse">
@@ -465,6 +487,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart10">
     <a id="Bell RS7"></a>
     <div class="imgBox">
       <img src="Image/Bell-RS7-Pro-1.png" alt="mouse corsair" class="mouse">
@@ -478,6 +501,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart11">
     <a id="Sparco Air KF-7W"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-9.png" alt="mouse corsair" class="mouse">
@@ -492,6 +516,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart12">
     <a id="Bell KC-7 CMR Fernando Alonso"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-7.png" alt="mouse corsair" class="mouse">
@@ -506,6 +531,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart13">
     <a id="Bell KC-7 CMR Lewis Hamilton"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-8.png" alt="mouse corsair" class="mouse">
@@ -520,6 +546,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart14">
     <a id="Bell KC-7 CMR Carbon"></a>
     <div class="imgBox">
       <img src="Снимки/kaska-11.png" alt="mouse corsair" class="mouse">
@@ -533,6 +560,7 @@
 
   </div>
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart15">
     <a id="Stilo ST5 Carbon"></a>
     <div class="imgBox">
       <img src="Image/Stilo-ST5-FN-1.png" alt="mouse corsair" class="mouse">
@@ -546,6 +574,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart16">
     <a id="Bell HP77"></a>
     <div class="imgBox">
       <img src="Image/Bell-HP77-1.png" alt="mouse corsair" class="mouse">
@@ -562,6 +591,7 @@
 
   </div>
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart17">
     <a id="Sparco Rookie"></a>
     <div class="imgBox">
       <img src="Снимки/suit-1.png" alt="mouse corsair" class="mouse">
@@ -577,6 +607,7 @@
 
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart18">
     <a id="Sparco Thunder"></a>
     <div class="imgBox">
       <img src="Снимки/suit-12.png" alt="mouse corsair" class="mouse">
@@ -590,6 +621,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart19">
     <a id="Sparco Kerb"></a>
     <div class="imgBox">
       <img src="Снимки/suit-11.png" alt="mouse corsair" class="mouse">
@@ -603,6 +635,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart20">
     <a id="OMP Sport"></a>
     <div class="imgBox">
       <img src="Снимки/suit-6.png" alt="mouse corsair" class="mouse">
@@ -616,6 +649,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart21">
     <a id="Alpinestars KMX-5 V2"></a>
     <div class="imgBox">
       <img src="Снимки/suit-13.png" alt="mouse corsair" class="mouse">
@@ -629,6 +663,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart22">
     <a id="OMP First S"></a>
     <div class="imgBox">
       <img src="Снимки/suit-7.png" alt="mouse corsair" class="mouse">
@@ -643,6 +678,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart23">
     <a id="Sparco Futura"></a>
     <div class="imgBox">
       <img src="Снимки/suit-3.png" alt="mouse corsair" class="mouse">
@@ -657,6 +693,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart24">
     <a id="OMP First Elle"></a>
     <div class="imgBox">
       <img src="Снимки/suit-8.png" alt="mouse corsair" class="mouse">
@@ -671,6 +708,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart25">
     <a id="OMP KS-Art Automobili Lamborghini Collection"></a>
     <div class="imgBox">
       <img src="Снимки/suit-14.png" alt="mouse corsair" class="mouse">
@@ -685,6 +723,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart26">
     <a id="OMP KS-2 Art Custom Design"></a>
     <div class="imgBox">
       <img src="Снимки/suit-custom%20design.png" alt="mouse corsair" class="mouse">
@@ -699,6 +738,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart27">
     <a id="OMP Classic"></a>
     <div class="imgBox">
       <img src="Снимки/suit-2.png" alt="mouse corsair" class="mouse">
@@ -713,6 +753,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart28">
     <a id="Sparco Competition Vintage"></a>
     <div class="imgBox">
       <img src="Снимки/suit-10.png" alt="mouse corsair" class="mouse">
@@ -727,6 +768,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart29">
     <a id="OMP One Art"></a>
     <div class="imgBox">
       <img src="Снимки/suit-9.png" alt="mouse corsair" class="mouse">
@@ -741,6 +783,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart30">
     <a id="Sparco Superleggera"></a>
     <div class="imgBox">
       <img src="Снимки/suit-4.png" alt="mouse corsair" class="mouse">
@@ -755,6 +798,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart31">
     <a id="Sparco Prime"></a>
     <div class="imgBox">
       <img src="Снимки/suit-5.png" alt="mouse corsair" class="mouse">
@@ -769,6 +813,7 @@
   </div>
 
   <div class="card">
+    <img src="Image/cart.png" class="cart-product" id="cart32">
     <a id="Sparco Martini"></a>
     <div class="imgBox">
       <img src="Снимки/suit-mechanic.png" alt="mouse corsair" class="mouse">
@@ -1618,5 +1663,6 @@
 
 </body>
 <script type="text/javascript" src="Script/Navbar.js"></script>
+<script type="text/javascript" src="Script/Shopping%20cart.js"></script>
 <script type="text/javascript" src="Script/Search%20bar.js"></script>
 </html>
