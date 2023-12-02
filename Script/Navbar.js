@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 const nav = document.querySelector(".nav"),
     searchIcon = document.querySelector("#searchIcon"),
     navOpenBtn = document.querySelector(".navOpenBtn"),

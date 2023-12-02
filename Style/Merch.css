@@ -5,12 +5,13 @@
 
 body {
     overflow-x: hidden;
-    color: #666;
+    color: #000000;
     left: 0;
     padding: 0;
     margin: 0 auto;
     position: relative;
     transition: ease all 0.3s;
+
 }
 body * {
     font-family: "Istok Web", sans-serif;
@@ -36,6 +37,7 @@ body li {
 }
 
 .contenedorCards {
+    margin: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -43,7 +45,7 @@ body li {
     justify-content: center;
     align-content: center;
     min-height: 100vh;
-    padding: 20px 0;
+    padding: 20px ;
     box-sizing: border-box;
     grid-template-columns: repeat(3,1fr);
 }
@@ -165,7 +167,7 @@ body li {
     font-size: 12px;
 }
 .contenedorCards .card .wrapper .infoProd .actions .preciosGrupo .precio:before {
-    content: var(--currencyPrefix);
+
     font-size: 20px;
 }
 .contenedorCards .card .wrapper .infoProd .actions .action {
