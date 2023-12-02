@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var checkoutBtn = document.getElementById('checkoutBtn');
     var closeCheckout = document.querySelector('.modal-content .close');
     var checkoutForm = document.getElementById('checkoutForm');
-    var totalPrice = document.getElementById('totalPrice');
+    var totalPriceCheckout = document.getElementById('totalPriceCheckout');
 
     checkoutBtn.addEventListener('click', function () {
         checkoutModal.style.display = 'block';
@@ -54,11 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
         // Например, изпращане на поръчката към сървъра.
         alert('Your order request has been sent. Expect additional information at the provided email.');
         checkoutModal.style.display = 'none';
+
+        const cartItems = document.getElementById('cartContent');
+        cartItems.innerHTML = '';
+
+        // Скриване на количката след изчистване
+        const cart = document.getElementById('cart');
+        cart.style.right = '-100%';
+
+        const priceRemove = document.getElementById('totalPrice')
+        priceRemove.innerHTML = 'Total: 0.00 лв.';
     });
 
     function updateTotalPriceInModal() {
-        var totalPriceInput = document.getElementById('totalPrice');
-        totalPriceInput.value = totalPrice.textContent.replace('Total: $', '');
+        var totalPriceInput = document.getElementById('totalPriceCheckout');
+        totalPriceInput.innerHTML = 'Total: ' + total.toFixed(2) + ' лв.'
     }
 });
 
@@ -79,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var closeCart = document.getElementById('closeCart');
     var totalPrice = document.getElementById('totalPrice');
     var cartContent = document.getElementById('cartContent');
-
     var productsInCart = [];
 
     function updateTotalPrice() {
@@ -1229,3 +1238,5 @@ function clearCart() {
     const priceRemove = document.getElementById('totalPrice')
     priceRemove.innerHTML = 'Total: 0.00 лв.';
 }
+
+
