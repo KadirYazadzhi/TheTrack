@@ -94,21 +94,6 @@
   </script>
 
 </nav>
-<script>
-  function sendMail(str) {
-    var link = "kyuya_2020g@pgiblg.com" + "&subject=" + escape("This is my subject") + "&body=" + escape(str);
-    location.href = link;
-  }
-  function submit_comment() {
-    var name = document.forms["contact_form"]["name"].value;
-    var Email = document.forms["contact_form"]["email"].value;
-    var Phone = document.forms["contact_form"]["phone"].value;
-    var Message = document.forms["contact_form"]["message"].value;
-    if((name !="") && (Email !="") && (Phone !="") && (Message !="")) {
-      sendMail("HELLO");
-    }
-  }
-</script>
 <div class="contact-section"></div>
 
 <div class="container">
