@@ -156,7 +156,6 @@
 
 
 
-
 /* Основен стил за модалния прозорец */
 .modal {
     display: none;
@@ -167,9 +166,13 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: auto;
-}
 
+}
+#modalcard {
+    display: none;
+}
 .modal-content {
+    top: -110px;
     background-color: #fff;
     margin: 10% auto;
     padding: 30px;
@@ -188,6 +191,7 @@
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease-in-out;
 }
 
 .close:hover,
@@ -228,6 +232,7 @@ input[type="radio"] {
     width: 20px;
     height: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
 input[type="radio"]:checked {
@@ -250,9 +255,9 @@ button:hover {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .modal-content {
-        width: 100%;
+        width: 90%;
         margin: 10%;
     }
 
@@ -261,3 +266,56 @@ button:hover {
         font-size: 14px;
     }
 }
+
+
+
+#messageModal {
+    display: none;
+    position: fixed;
+    align-items: center;
+    align-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+#messageModal .modal-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid #3498db;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+}
+
+#messageModal .close {
+    color: #3498db;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+#messageModal .close:hover,
+#messageModal .close:focus {
+    color: #2c3e50;
+}
+
+#messageContent {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Добавете по ваше желание стилове за иконки */

@@ -1,18 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     var checkoutModal = document.getElementById('checkoutModal');
     var checkoutBtn = document.getElementById('checkoutBtn');
@@ -50,20 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         checkoutForm.setAttribute('data-address', address);
         checkoutForm.setAttribute('data-deliveryprovider', deliveryProvider);
 
-        // Тук можете да добавите логика за обработка на поръчката
-        // Например, изпращане на поръчката към сървъра.
-        alert('Your order request has been sent. Expect additional information at the provided email.');
-        checkoutModal.style.display = 'none';
 
-        const cartItems = document.getElementById('cartContent');
-        cartItems.innerHTML = '';
-
-        // Скриване на количката след изчистване
-        const cart = document.getElementById('cart');
-        cart.style.right = '-100%';
-
-        const priceRemove = document.getElementById('totalPrice')
-        priceRemove.innerHTML = 'Total: 0.00 лв.';
     });
 
     function updateTotalPriceInModal() {
@@ -1237,6 +1211,102 @@ function clearCart() {
 
     const priceRemove = document.getElementById('totalPrice')
     priceRemove.innerHTML = 'Total: 0.00 лв.';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const closeNameModal = document.getElementById('closeNameModal');
+    const closeCardModal = document.getElementById('closeCardModal');
+    const nextButton = document.getElementById('next');
+    const payNowButton = document.getElementById('payNowButton');
+
+    closeNameModal.addEventListener('click', function () {
+        document.getElementById('namemodal').style.display = 'none';
+    });
+
+    closeCardModal.addEventListener('click', function () {
+        document.getElementById('modalcard').style.display = 'none';
+    });
+
+    nextButton.addEventListener('click', function () {
+        if (validateNameForm()) {
+            document.getElementById('namemodal').style.display = 'none';
+            document.getElementById('modalcard').style.display = 'block';
+        }
+    });
+
+    payNowButton.addEventListener('click', function () {
+        if (validateCardForm()) {
+            // Добавете следния код към вашия JavaScript
+            const payNowButton = document.getElementById('payNowButton');
+            const messageModal = document.getElementById('messageModal');
+            const messageContent = document.getElementById('messageContent');
+            const messageModalClose = document.getElementById('messageModalClose');
+
+// При натискане на бутона "Pay Now"
+            payNowButton.addEventListener('click', function () {
+                // Вашият код за валидация и изпращане на заявка
+
+                // Пример: извеждане на съобщение за успешно плащане
+                showMessageModal('Payment successful!', 'success');
+            });
+
+// Функция за показване на модален прозорец със съобщение и икона
+            function showMessageModal(message, type) {
+                // Задаване на съдържание и стилове според типа на съобщението
+                messageContent.innerHTML = message;
+
+                // Добавяне на икона в зависимост от типа
+                switch (type) {
+                    case 'success':
+                        messageContent.innerHTML += '<br><i class="icon-success">&#10004;</i>';
+                        break;
+                    // Добавете още case по ваше желание за други типове съобщения
+                }
+
+                // Показване на модалния прозорец
+                messageModal.style.display = 'block';
+
+                // Затваряне на модалния прозорец при клик върху close бутона
+                messageModalClose.onclick = function () {
+                    messageModal.style.display = 'none';
+                };
+            }
+
+        }
+    });
+});
+
+
+
+
+function validateNameForm() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    const address = document.getElementById('address').value;
+
+    document.getElementById('firstNameError').innerText = firstName.trim() === '' ? 'Please enter your first name.' : '';
+    document.getElementById('lastNameError').innerText = lastName.trim() === '' ? 'Please enter your last name.' : '';
+    document.getElementById('phoneNumberError').innerText = phoneNumber.trim() === '' ? 'Please enter your phone number.' : '';
+    document.getElementById('addressError').innerText = address.trim() === '' ? 'Please enter your address.' : '';
+
+    return firstName.trim() !== '' && lastName.trim() !== '' && phoneNumber.trim() !== '' && address.trim() !== '';
+}
+
+function validateCardForm() {
+    const cardNumber = document.getElementById('cardNumber').value;
+    const cardHolder = document.getElementById('cardHolder').value;
+    const expiryDate = document.getElementById('expiryDate').value;
+    const cvv = document.getElementById('cvv').value;
+
+    document.getElementById('cardNumberError').innerText = cardNumber.trim() === '' ? 'Please enter your card number.' : '';
+    document.getElementById('cardHolderError').innerText = cardHolder.trim() === '' ? 'Please enter the card holder\'s name.' : '';
+    document.getElementById('expiryDateError').innerText = expiryDate.trim() === '' ? 'Please enter the expiry date.' : '';
+    document.getElementById('cvvError').innerText = cvv.trim() === '' ? 'Please enter the CVV.' : '';
+
+    return cardNumber.trim() !== '' && cardHolder.trim() !== '' && expiryDate.trim() !== '' && cvv.trim() !== '';
+
+
 }
 
 
