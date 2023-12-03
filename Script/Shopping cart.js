@@ -1,63 +1,6 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    var checkoutModal = document.getElementById('checkoutModal');
-    var checkoutBtn = document.getElementById('checkoutBtn');
-    var closeCheckout = document.querySelector('.modal-content .close');
-    var checkoutForm = document.getElementById('checkoutForm');
-    var totalPriceCheckout = document.getElementById('totalPriceCheckout');
-
-    checkoutBtn.addEventListener('click', function () {
-        checkoutModal.style.display = 'block';
-        updateTotalPriceInModal();
-    });
-
-    closeCheckout.addEventListener('click', function () {
-        checkoutModal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function (event) {
-        if (event.target === checkoutModal) {
-            checkoutModal.style.display = 'none';
-        }
-    });
-
-    checkoutForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        // Извлекете информацията от формата и запазете в атрибути
-        var firstName = document.getElementById('firstName').value;
-        var lastName = document.getElementById('lastName').value;
-        var phoneNumber = document.getElementById('phoneNumber').value;
-        var address = document.getElementById('address').value;
-        var deliveryProvider = document.querySelector('input[name="deliveryProvider"]:checked').value;
-
-        checkoutForm.setAttribute('data-firstname', firstName);
-        checkoutForm.setAttribute('data-lastname', lastName);
-        checkoutForm.setAttribute('data-phonenumber', phoneNumber);
-        checkoutForm.setAttribute('data-address', address);
-        checkoutForm.setAttribute('data-deliveryprovider', deliveryProvider);
-
-
-    });
-
-    function updateTotalPriceInModal() {
-        var totalPriceInput = document.getElementById('totalPriceCheckout');
-        totalPriceInput.innerHTML = 'Total: ' + total.toFixed(2) + ' лв.'
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
     var cartIcon = document.getElementById('cartIcon');
     var cart = document.getElementById('cart');
     var closeCart = document.getElementById('closeCart');
@@ -72,19 +15,20 @@ document.addEventListener("DOMContentLoaded", function () {
         totalPrice.textContent = 'Total: ' + total.toFixed(2) + ' лв.';
     }
 
-    function addToCart(productName, productPrice, productImage) {
+    function addToCart(productName, productPrice, productImage, quantity) {
         var existingProduct = productsInCart.find(function (product) {
             return product.name === productName;
         });
 
         if (existingProduct) {
-            existingProduct.quantity++;
+            existingProduct.quantity += quantity || 1;
             updateProductQuantityInCart(existingProduct);
         } else {
             var product = {
                 name: productName,
                 price: productPrice,
-                quantity: 1
+                quantity: quantity || 1,
+                image: productImage
             };
             productsInCart.push(product);
 
@@ -98,10 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var productInfoElement = document.createElement('div');
             productInfoElement.classList.add('product-info');
             productInfoElement.innerHTML =
-                '<strong>' + productName + '</strong> ' + productPrice.toFixed(2) + '</strong> лв.'+
+                '<strong>' + productName + '</strong> ' + productPrice.toFixed(2) + '</strong> лв.' +
                 '<br>Количество: <span class="quantity">' + product.quantity + '</span>' +
                 '<span class="removeProduct">&#10006; Премахни</span>';
-
 
             productElement.appendChild(productInfoElement);
 
@@ -114,10 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     return p.name !== productName;
                 });
                 updateTotalPrice();
+                updateLocalStorage();
             });
         }
 
         updateTotalPrice();
+        updateLocalStorage();
     }
 
     function updateProductQuantityInCart(product) {
@@ -131,6 +76,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function updateLocalStorage() {
+        localStorage.setItem('cart', JSON.stringify(productsInCart));
+    }
+
+    function clearCart() {
+        // Изчистване на съдържанието на количката
+        const cartItems = document.getElementById('cartContent');
+        cartItems.innerHTML = '';
+
+        // Нулиране на общата цена
+        const totalPrice = document.getElementById('totalPrice');
+        totalPrice.textContent = 'Total: 0.00 лв.';
+
+        // Изчистване на localStorage
+        localStorage.removeItem('cart');
+
+        // Нулиране на масива с продуктите
+        productsInCart = [];
+    }
+
     cartIcon.addEventListener('click', function () {
         cart.style.right = '0';
     });
@@ -138,6 +103,23 @@ document.addEventListener("DOMContentLoaded", function () {
     closeCart.addEventListener('click', function () {
         cart.style.right = '-300px';
     });
+
+    // Проверка за запазена количка в localStorage
+    var storedCart = JSON.parse(localStorage.getItem('cart'));
+    if (storedCart) {
+        // Проходим през всички продукти в количката и ги добавяме в интерфейса
+        storedCart.forEach(function (product) {
+            addToCart(product.name, product.price, product.image, product.quantity);
+        });
+    }
+
+    const cancelBtn = document.getElementById('cancelBtn');
+    cancelBtn.addEventListener('click', function () {
+        // Изчистване на количката и localStorage
+        clearCart();
+    });
+
+
 
     // Продукт 1
     var cart1Image = document.getElementById('cart1');
@@ -1192,121 +1174,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
-
-const cancelBtn = document.getElementById('cancelBtn');
-cancelBtn.addEventListener('click', function () {
-    // Изчистване на количката
-    clearCart();
-});
-
-function clearCart() {
-    // Изчистване на съдържанието на количката
-    // Пример: ако вашата количка е списък с id "cartItems"
-    const cartItems = document.getElementById('cartContent');
-    cartItems.innerHTML = '';
-
-    // Скриване на количката след изчистване
-    const cart = document.getElementById('cart');
-    cart.style.right = '-100%';
-
-    const priceRemove = document.getElementById('totalPrice')
-    priceRemove.innerHTML = 'Total: 0.00 лв.';
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    const closeNameModal = document.getElementById('closeNameModal');
-    const closeCardModal = document.getElementById('closeCardModal');
-    const nextButton = document.getElementById('next');
-    const payNowButton = document.getElementById('payNowButton');
-
-    closeNameModal.addEventListener('click', function () {
-        document.getElementById('namemodal').style.display = 'none';
-    });
-
-    closeCardModal.addEventListener('click', function () {
-        document.getElementById('modalcard').style.display = 'none';
-    });
-
-    nextButton.addEventListener('click', function () {
-        if (validateNameForm()) {
-            document.getElementById('namemodal').style.display = 'none';
-            document.getElementById('modalcard').style.display = 'block';
-        }
-    });
-
-    payNowButton.addEventListener('click', function () {
-        if (validateCardForm()) {
-            // Добавете следния код към вашия JavaScript
-            const payNowButton = document.getElementById('payNowButton');
-            const messageModal = document.getElementById('messageModal');
-            const messageContent = document.getElementById('messageContent');
-            const messageModalClose = document.getElementById('messageModalClose');
-
-// При натискане на бутона "Pay Now"
-            payNowButton.addEventListener('click', function () {
-                // Вашият код за валидация и изпращане на заявка
-
-                // Пример: извеждане на съобщение за успешно плащане
-                showMessageModal('Payment successful!', 'success');
-            });
-
-// Функция за показване на модален прозорец със съобщение и икона
-            function showMessageModal(message, type) {
-                // Задаване на съдържание и стилове според типа на съобщението
-                messageContent.innerHTML = message;
-
-                // Добавяне на икона в зависимост от типа
-                switch (type) {
-                    case 'success':
-                        messageContent.innerHTML += '<br><i class="icon-success">&#10004;</i>';
-                        break;
-                    // Добавете още case по ваше желание за други типове съобщения
-                }
-
-                // Показване на модалния прозорец
-                messageModal.style.display = 'block';
-
-                // Затваряне на модалния прозорец при клик върху close бутона
-                messageModalClose.onclick = function () {
-                    messageModal.style.display = 'none';
-                };
-            }
-
-        }
-    });
-});
-
-
-
-
-function validateNameForm() {
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const phoneNumber = document.getElementById('phoneNumber').value;
-    const address = document.getElementById('address').value;
-
-    document.getElementById('firstNameError').innerText = firstName.trim() === '' ? 'Please enter your first name.' : '';
-    document.getElementById('lastNameError').innerText = lastName.trim() === '' ? 'Please enter your last name.' : '';
-    document.getElementById('phoneNumberError').innerText = phoneNumber.trim() === '' ? 'Please enter your phone number.' : '';
-    document.getElementById('addressError').innerText = address.trim() === '' ? 'Please enter your address.' : '';
-
-    return firstName.trim() !== '' && lastName.trim() !== '' && phoneNumber.trim() !== '' && address.trim() !== '';
-}
-
-function validateCardForm() {
-    const cardNumber = document.getElementById('cardNumber').value;
-    const cardHolder = document.getElementById('cardHolder').value;
-    const expiryDate = document.getElementById('expiryDate').value;
-    const cvv = document.getElementById('cvv').value;
-
-    document.getElementById('cardNumberError').innerText = cardNumber.trim() === '' ? 'Please enter your card number.' : '';
-    document.getElementById('cardHolderError').innerText = cardHolder.trim() === '' ? 'Please enter the card holder\'s name.' : '';
-    document.getElementById('expiryDateError').innerText = expiryDate.trim() === '' ? 'Please enter the expiry date.' : '';
-    document.getElementById('cvvError').innerText = cvv.trim() === '' ? 'Please enter the CVV.' : '';
-
-    return cardNumber.trim() !== '' && cardHolder.trim() !== '' && expiryDate.trim() !== '' && cvv.trim() !== '';
-
-
-}
 
 

@@ -5,57 +5,78 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalPrice = document.getElementById("totalPrice");
     const cartContent = document.getElementById("cartContent");
 
-    const productsInCart = [];
+    let productsInCart = [];
 
     function updateTotalPrice() {
         let total = productsInCart.reduce(function (sum, product) {
-            return sum + product.price * product.quantity;
+            return sum + product.totalPrice;
         }, 0);
         totalPrice.textContent = 'Total: ' + total.toFixed(2) + ' лв.';
     }
-    function addToCart(productName, productPrice, productImage) {
+
+    cartIcon.addEventListener('click', function () {
+        cart.style.right = '0';
+    });
+
+    closeCart.addEventListener('click', function () {
+        cart.style.right = '-300px';
+    });
+
+    function addToCart(productName, productPrice, productImage, quantity = 1) {
         const existingProduct = productsInCart.find(function (product) {
             return product.name === productName;
         });
 
         if (existingProduct) {
-            existingProduct.quantity++;
+            existingProduct.quantity += quantity;
+            existingProduct.totalPrice = existingProduct.price * existingProduct.quantity;
             updateProductQuantityInCart(existingProduct);
         } else {
             const product = {
                 name: productName,
                 price: productPrice,
-                quantity: 1,
+                quantity: quantity,
+                totalPrice: productPrice * quantity,
                 image: productImage
             };
             productsInCart.push(product);
 
-            const productElement = document.createElement('div');
-            productElement.classList.add('product');
-
-            const imgElement = document.createElement('img');
-            imgElement.src = productImage;
-            productElement.appendChild(imgElement);
-
-            const productInfoElement = document.createElement('div');
-            productInfoElement.classList.add('product-info');
-            productInfoElement.innerHTML =
-                '<strong>' + productName + '</strong> ' + productPrice.toFixed(2) + '</strong> лв.' +
-                '<br>Количество: <span class="quantity">' + product.quantity + '</span>' +
-                '<span class="removeProduct">&#10006; Премахни</span>';
-
-            productElement.appendChild(productInfoElement);
+            const productElement = createProductElement(product);
             cartContent.appendChild(productElement);
 
-            const removeButton = productInfoElement.querySelector('.removeProduct');
+            const removeButton = productElement.querySelector('.removeProduct');
             removeButton.addEventListener('click', function () {
                 cartContent.removeChild(productElement);
-                productsInCart.splice(productsInCart.indexOf(product), 1);
+                productsInCart = productsInCart.filter(function (p) {
+                    return p.name !== productName;
+                });
                 updateTotalPrice();
+                updateLocalStorage();
             });
         }
 
         updateTotalPrice();
+        updateLocalStorage();
+    }
+
+    function createProductElement(product) {
+        const productElement = document.createElement('div');
+        productElement.classList.add('product');
+
+        const imgElement = document.createElement('img');
+        imgElement.src = product.image;
+        productElement.appendChild(imgElement);
+
+        const productInfoElement = document.createElement('div');
+        productInfoElement.classList.add('product-info');
+        productInfoElement.innerHTML =
+            `<strong>${product.name}</strong> ${product.price.toFixed(2)} лв.` +
+            `<br>Количество: <span class="quantity">${product.quantity}</span>` +
+            '<span class="removeProduct">&#10006; Премахни</span>';
+
+        productElement.appendChild(productInfoElement);
+
+        return productElement;
     }
 
     function updateProductQuantityInCart(product) {
@@ -69,15 +90,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    cartIcon.addEventListener('click', function () {
-        cart.style.right = '0';
+    function updateLocalStorage() {
+        localStorage.setItem('cart', JSON.stringify(productsInCart));
+    }
+
+    function clearCart() {
+        // Изчистване на съдържанието на количката
+        const cartItems = document.getElementById('cartContent');
+        cartItems.innerHTML = '';
+
+        // Нулиране на общата цена
+        const totalPrice = document.getElementById('totalPrice');
+        totalPrice.textContent = 'Total: 0.00 лв.';
+
+        // Изчистване на localStorage
+        localStorage.removeItem('cart');
+        localStorage.clear();
+
+        // Скриване на количката след изчистване
+        const cart = document.getElementById('cart');
+        cart.style.right = '-100%';
+
+        // Нулиране на масива с продуктите
+        productsInCart = [];
+    }
+
+    // Проверка за запазена количка в localStorage
+    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+    storedCart.forEach(function (product) {
+        addToCart(product.name, product.price, product.image, product.quantity);
     });
 
-    closeCart.addEventListener('click', function () {
-        cart.style.right = '-300px';
+    const cancelBtn = document.getElementById('cancelBtn');
+    cancelBtn.addEventListener('click', function () {
+        // Изчистване на количката
+        clearCart();
     });
 
-    // Продукт 89
+
+
+
+// Продукт 89
     const cart89Image = document.getElementById('cart89');
     cart89Image.addEventListener('click', function () {
         const productName = 'White T-Shirt with logo';
@@ -86,10 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
         addToCart(productName, productPrice, productImage);
         cart.style.right = '0';
     });
-
-
-
-
 
 
 // Продукт 90
@@ -271,26 +320,19 @@ document.addEventListener("DOMContentLoaded", function () {
         cart.style.right = '0';
     });
 
-
-    const cancelBtn = document.getElementById('cancelBtn');
-    cancelBtn.addEventListener('click', function () {
-        // Изчистване на количката
-        clearCart();
-    });
-
-    function clearCart() {
-        // Изчистване на съдържанието на количката
-        // Пример: ако вашата количка е списък с id "cartItems"
-        const cartItems = document.getElementById('cartContent');
-        cartItems.innerHTML = '';
-
-        // Скриване на количката след изчистване
-        const cart = document.getElementById('cart');
-        cart.style.right = '-100%';
-
-        const priceRemove = document.getElementById('totalPrice')
-        priceRemove.innerHTML = 'Total: 0.00 лв.';
-    }
-
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
