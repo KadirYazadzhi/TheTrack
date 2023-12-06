@@ -33,40 +33,35 @@ section {
     margin-top: 10px;
 }
 
-#acceptButton,
+
 #rejectButton {
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 18px;
     cursor: pointer;
+    font-weight: 600;
 }
 
-#acceptButton {
-    background: rgb(115,206,247);
-    background: linear-gradient(90deg, rgba(115,206,247,1) 0%, rgba(115,44,222,1) 91%);
-    color: #fff;
-    border: none;
-    text-decoration: none;
-    height: 50px;
-    width: 130px;
 
-}
-#acceptButton:hover,#rejectButton:hover {
-    background: rgb(115,206,247);
-    background: linear-gradient(90deg, rgb(59, 189, 248) 0%, rgb(104, 24, 224) 91%);
-}
 
 #rejectButton {
     background: rgb(115,206,247);
     background: linear-gradient(90deg, rgba(115,206,247,1) 0%, rgba(115,44,222,1) 91%);
-    color: #fff;
+    color: #000000;
     border: none;
     text-decoration: none;
-    height: 50px;
-    width: 100px;
+    height: 60px;
+    width: 40%;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 
-    margin-left: 10px; /* Добавяне на малко разстояние между бутоните */
 }
-
+#rejectButton:hover {
+    background: rgb(115,206,247);
+    background: linear-gradient(90deg, rgb(54, 189, 250) 0%, rgb(98, 24, 210) 91%);
+    color: white;
+    box-shadow: 1px 1px 10px #36BDFAFF;
+}
 /* Стилизиране на връзките във бутоните */
 #rejectButton a {
     color: #fff;

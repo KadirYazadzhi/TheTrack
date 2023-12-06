@@ -244,7 +244,7 @@ input[type="radio"]:checked {
     background-color: #3498db;
 }
 
-button {
+.buttonCheckout {
     background-color: #3498db;
     color: #fff;
     padding: 15px;
@@ -255,7 +255,7 @@ button {
     transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+.buttonCheckout:hover {
     background-color: #2980b9;
 }
 

@@ -51,9 +51,7 @@ body {
     overflow: hidden;
     float: left;
     margin:10px;
-
     border: 1px solid #ddd;
-
     box-sizing: border-box;
     box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.09), 0 0 8px #17238d;
 
