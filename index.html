@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="Style/Footer.css">
     <link rel="stylesheet" href="Style/Animation.css">
     <link rel="stylesheet" href="Style/Cookies.css">
+    <link rel="stylesheet" href="Style/Sign%20up.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -30,7 +31,7 @@
 
     <title>The Track</title>
 </head>
-<body oncontextmenu="return false;" onselectstart="return false"  >
+<body   >
 <div id="cookieModal" class="modal-cookie">
     <div id="modalcookie" class="modal-content-cookie">
 
@@ -42,14 +43,21 @@
     </div>
 </div>
 <nav class="nav">
+    <i class="uil uil-bars navOpenBtn"></i>
+
+
     <div class="profile">
-       <img class="profile-picture" src="Image/profile-picture.png" href="#" data-target="#login" data-toggle="modal">
-        <p class="username-profile" id="user">Login</p>
+        <img class="profile-picture" src="Image/profile-picture.png" href="#" data-target="#login" data-toggle="modal">
+        <p class="username-profile" id="user">User</p>
     </div>
 
-    <div id="login" class="modal fade" role="dialog">
-        <div class="container">
+    <div class="biglogin" id="biglogin">
+        <span class="closelogin" onclick="closeLoginForm()">&times;</span>
+        <div class="container" id="smalllogin">
+
+
             <div class="form-container sign-in-container">
+
                 <form action="#">
                     <h1>Sign in</h1>
                     <div class="social-container">
@@ -74,7 +82,6 @@
         </div>
     </div>
 
-    <i class="uil uil-bars navOpenBtn"></i>
 
     <a href="index.html" class="hl"></a>
 
