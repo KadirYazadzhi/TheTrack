@@ -8,6 +8,7 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="Style/Karting.css">
+  <link rel="stylesheet" href="Style/Sign%20up.css">
   <link rel="stylesheet" href="Style/Navbar.css">
   <link rel="stylesheet" href="Style/Footer.css">
   <link rel="stylesheet" href="Style/Animation.css">
@@ -20,6 +21,44 @@
 
 <nav class="nav">
   <i class="uil uil-bars navOpenBtn"></i>
+
+
+
+  <div class="profile">
+    <img  class="profile-picture" id="profilePicture" src="Image/profile-picture.png" href="#" data-target="#login" data-toggle="modal">
+    <p class="username-profile" id="user">User</p>
+  </div>
+
+  <div class="biglogin" id="biglogin">
+    <span class="closelogin" onclick="closeLoginForm()">&times;</span>
+    <div class="container" id="smalllogin">
+
+
+      <div class="form-container sign-in-container">
+
+        <form action="#">
+          <h1>Sign up</h1>
+          <div class="social-container">
+            <div class="fab"><img class="fab-image" src="Image/facebook.png"></div>
+            <div class="fab"><img class="fab-image" src="Image/google.png"></div>
+            <div class="fab"><img class="fab-image" src="Image/linkedin.png"></div>
+          </div>
+          <span>or use your account</span>
+          <input id="name" class="input-profile" type="text" placeholder="Name" oninput="validateField('name')" />
+          <span id="nameError" class="error-message"></span>
+
+          <input id="email" class="input-profile" type="email" placeholder="Email" oninput="validateField('email')" />
+          <span id="emailError" class="error-message"></span>
+
+          <input id="password" class="input-profile" type="password" placeholder="Password" oninput="validateField('password')" />
+          <span id="passwordError" class="error-message"></span>
+
+          <a href="#">Forgot your password?</a>
+          <button class="formbutton" id="submitprofile" onclick="validateForm()">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <a href="index.html" class="hl"></a>
 
@@ -559,6 +598,7 @@
 
 
 </footer>
+<script src="Script/Validation-Sign-up.js"></script>
 <script src="Script/Karting.js"></script>
 <script src="Script/Price-Karting.js"></script>
 <script type="text/javascript" src="Script/Navbar.js"></script>

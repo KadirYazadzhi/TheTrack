@@ -312,6 +312,8 @@ a {
     height: 30px;
     border-radius: 50%;
     position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 .username-profile {
     font-weight: 500;

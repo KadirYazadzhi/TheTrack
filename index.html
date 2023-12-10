@@ -47,7 +47,7 @@
 
 
     <div class="profile">
-        <img class="profile-picture" src="Image/profile-picture.png" href="#" data-target="#login" data-toggle="modal">
+        <img onclick="openModal()" class="profile-picture" id="profilePicture" src="Image/profile-picture.png"  data-target="#login" data-toggle="modal">
         <p class="username-profile" id="user">User</p>
     </div>
 
@@ -78,6 +78,48 @@
                     <a href="#">Forgot your password?</a>
                     <button class="formbutton" id="submitprofile" onclick="validateForm()">Sign In</button>
                 </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="settingsModal" class="modalNew">
+        <div class="modal-content-New">
+            <div class="left-modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="profileImage" class="profile-image" src="Image/user.png" alt="Profile Image">
+            <input id="newImage" type="file" accept="image/*">
+            <div class="input-group">
+                <label for="newName">New Name:</label>
+                <input id="newName" type="text" placeholder="New Name">
+            </div>
+            <div class="input-group">
+                <label for="newEmail">New Email:</label>
+                <input id="newEmail" type="email" placeholder="New Email">
+            </div>
+            <div class="input-group">
+                <label for="newPassword">New Password:</label>
+                <input id="newPassword" type="password" placeholder="New Password">
+            </div>
+            </div>
+            <div class="right-modal">
+                <img  class="oldProfileImage" src="Image/profile-picture.png" alt="Profile Image">
+                <div class="input-group">
+                    <label for="newName">Old Name:</label>
+                    <input id="oldName" type="text" placeholder="" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="newEmail">Old Email:</label>
+                    <input id="oldEmail" type="email" placeholder="" readonly>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">Old Password:</label>
+                    <input id="oldPassword" type="password" placeholder="" readonly>
+                </div>
+            </div>
+            <div class="loginbutton">
+            <button id="newProfile"  >Save Changes</button>
+                <button id="deleteProfileBtn" onclick="deleteProfile()">Delete Profile</button>
+
             </div>
         </div>
     </div>
