@@ -291,6 +291,7 @@ button:last-child:hover {
     .modal-content-New {
         display: flex;
         flex-direction: column;
+        overflow: scroll;
     }
     .right-modal {
         width: 100%;

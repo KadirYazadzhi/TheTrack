@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginModal = document.getElementById('biglogin');
     const settingsModal = document.getElementById('settingsModal');
     const settingsNew = document.getElementById('modal-content-New')
-    const profilePicture = document.getElementById('"profilePicture')
+    const profilePicture = document.getElementById('profilePicture');
+    const oldProfileImage = document.querySelector('.oldProfileImage');
+    const profileImageInput = document.getElementById('newImage');
     function validateField(fieldName) {
         const field = document.getElementById(fieldName);
         const errorElement = document.getElementById(`${fieldName}Error`);
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return isNameValid && isEmailValid && isPasswordValid;
     }
+
 
     function handleInputChange(event) {
         const field = event.target;
@@ -86,9 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
     userParagraph.addEventListener('click', function () {
         if (userParagraph.innerText === 'User') {
             loginModal.style.display = 'block';
-            login.style.display = 'block'
-            settingsModal.style.display = 'none'
-            settingsNew.style.display = 'none'
+            login.style.display = 'block';
+            settingsModal.style.display = 'none';
         }
     });
 
@@ -96,10 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Проверка при отваряне на модалната форма за настройки
     document.addEventListener('click', function (event) {
         if (event.target === userParagraph && userParagraph.innerText !== 'User') {
-            settingsModal.style.display = 'block';
+            settingsModal.style.display = 'block'
             loginModal.style.display = 'none';
-            login.style.display = 'none'
-            settingsNew.style.display = 'block'
+            login.style.display = 'none';
             loadSettings();  // Зареждане на текущите настройки
         }
     });
@@ -110,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const newName = document.getElementById('newName').value.trim();
         const newEmail = document.getElementById('newEmail').value.trim();
         const newPassword = document.getElementById('newPassword').value.trim();
+        const profileImage = localStorage.getItem('profileImage');
 
         if (newName !== '') {
             localStorage.setItem('userName', newName);
@@ -120,21 +122,32 @@ document.addEventListener('DOMContentLoaded', function () {
         if (newPassword !== '') {
             localStorage.setItem('userPassword', newPassword);
         }
+        if (profileImage) {
+            localStorage.setItem('profileImage', profileImage);
+        }
     }
-
     // Зареждане на текущите настройки
     function loadSettings() {
         const oldName = document.getElementById('oldName');
         const oldEmail = document.getElementById('oldEmail');
         const oldPassword = document.getElementById('oldPassword');
+        const profileImage = document.getElementById('profileImage');
 
         const storedUserName = localStorage.getItem('userName');
         const storedUserEmail = localStorage.getItem('userEmail');
         const storedUserPassword = localStorage.getItem('userPassword');
+        const storedProfileImage = localStorage.getItem('profileImage');
 
         oldName.value = storedUserName || '';
         oldEmail.value = storedUserEmail || '';
         oldPassword.value = storedUserPassword || '';
+        profileImage.src = storedProfileImage || '';
+
+        // Визуализация на профилната снимка в изображенията с id-та oldProfileImage и profilePicture
+        if (storedProfileImage) {
+            oldProfileImage.src = storedProfileImage;
+            profilePicture.src = storedProfileImage;
+        }
     }
 
     // Затваряне на модалния прозорец за настройки
@@ -147,14 +160,18 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.removeItem('userName');
         localStorage.removeItem('userEmail');
         localStorage.removeItem('userPassword');
+        localStorage.removeItem('profileImage');
 
-        // Изчистване на стойностите в old полетата
+        // Изчистване на стойностите в old полетата и изображенията
         const oldName = document.getElementById('oldName');
         const oldEmail = document.getElementById('oldEmail');
         const oldPassword = document.getElementById('oldPassword');
+        const profileImage = document.getElementById('profileImage');
+
         oldName.value = '';
         oldEmail.value = '';
         oldPassword.value = '';
+        profileImage.src = '';
 
         closeSettingsModal();
     }
@@ -171,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('newName').value = '';
             document.getElementById('newEmail').value = '';
             document.getElementById('newPassword').value = '';
+            document.getElementById('newImage').value = '';
         });
     }
 
@@ -239,8 +257,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
+
+// Обработка на събитие при избор на нова снимка
+    profileImageInput.addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const imageData = e.target.result;
+                localStorage.setItem('profileImage', imageData);
+
+                // Визуализация на профилната снимка в изображенията с id-та oldProfileImage и profilePicture
+                oldProfileImage.src = imageData;
+                profilePicture.src = imageData;
+
+                // Проверка дали бутона с id newProfile е натиснат, преди да се приемат промените
+                const newProfileBtn = document.getElementById('newProfile');
+                if (newProfileBtn && newProfileBtn.classList.contains('active')) {
+                    saveNewProfile();  // Ако бутона е натиснат, приеми промените
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+
     // Зареждане на стойностите от Local Storage в "old" полетата при рестартиране
     loadSettings();
+    saveSettings()
 });
 
 
@@ -261,9 +306,7 @@ const modal = document.getElementById('settingsModal');
 const profileImage = document.getElementById('profileImage');
 const newImageInput = document.getElementById('newImage');
 
-function openModal() {
-    modal.style.display = 'block'
-}
+
 
 function closeModal() {
     modal.style.display = 'none';
@@ -281,13 +324,17 @@ newImageInput.addEventListener('change', (event) => {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Вашият съществуващ код
 
-function saveChanges() {
-    // Implement logic to save changes (name, email, password)
-    closeModal();
-}
+    const closeLoginButton = document.getElementById('closeLogin');
+    const loginModal = document.getElementById('biglogin');
 
-function deleteProfile() {
-    // Implement logic to delete the profile
-    closeModal();
-}
+    if (closeLoginButton) {
+        closeLoginButton.addEventListener('click', function () {
+            loginModal.style.display = 'none';
+        });
+    }
+
+    // Вашият съществуващ код
+});

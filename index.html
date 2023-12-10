@@ -52,7 +52,7 @@
     </div>
 
     <div class="biglogin" id="biglogin">
-        <span class="closelogin" onclick="closeLoginForm()">&times;</span>
+        <span class="closelogin" id="closeLogin" >&times;</span>
         <div class="container" id="smalllogin">
 
 
@@ -86,39 +86,39 @@
         <div class="modal-content-New">
             <div class="left-modal">
             <span class="close" onclick="closeModal()">&times;</span>
-            <img id="profileImage" class="profile-image" src="Image/user.png" alt="Profile Image">
+            <img id="profileImage" class="profile-image" src="#" alt="Profile Image">
             <input id="newImage" type="file" accept="image/*">
             <div class="input-group">
                 <label for="newName">New Name:</label>
-                <input id="newName" type="text" placeholder="New Name">
+                <input id="newName" type="text" required placeholder="New Name">
             </div>
             <div class="input-group">
                 <label for="newEmail">New Email:</label>
-                <input id="newEmail" type="email" placeholder="New Email">
+                <input id="newEmail" type="email" required placeholder="New Email">
             </div>
             <div class="input-group">
                 <label for="newPassword">New Password:</label>
-                <input id="newPassword" type="password" placeholder="New Password">
+                <input id="newPassword" type="password" required placeholder="New Password">
             </div>
             </div>
             <div class="right-modal">
                 <img  class="oldProfileImage" src="Image/profile-picture.png" alt="Profile Image">
                 <div class="input-group">
-                    <label for="newName">Old Name:</label>
-                    <input id="oldName" type="text" placeholder="" readonly>
+                    <label for="oldName">Old Name:</label>
+                    <input id="oldName" type="text" required placeholder="" readonly>
                 </div>
                 <div class="input-group">
-                    <label for="newEmail">Old Email:</label>
-                    <input id="oldEmail" type="email" placeholder="" readonly>
+                    <label for="oldEmail">Old Email:</label>
+                    <input id="oldEmail" type="email" placeholder="" required readonly>
                 </div>
                 <div class="input-group">
-                    <label for="newPassword">Old Password:</label>
-                    <input id="oldPassword" type="password" placeholder="" readonly>
+                    <label for="oldPassword" >Old Password:</label>
+                    <input id="oldPassword" type="password" placeholder="" required readonly>
                 </div>
             </div>
             <div class="loginbutton">
-            <button id="newProfile"  >Save Changes</button>
-                <button id="deleteProfileBtn" onclick="deleteProfile()">Delete Profile</button>
+            <button id="newProfile" onclick="" >Save Changes</button>
+                <button id="deleteProfileBtn" >Delete Profile</button>
 
             </div>
         </div>
