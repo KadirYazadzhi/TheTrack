@@ -33,19 +33,20 @@
 
 
 
+
     <div class="profile">
-        <img  class="profile-picture" id="profilePicture" src="Image/profile-picture.png" href="#" data-target="#login" data-toggle="modal">
+        <img onclick="openModal()" class="profile-picture" id="profilePicture" src="Image/profile-picture.png"  data-target="#login" data-toggle="modal">
         <p class="username-profile" id="user">User</p>
     </div>
 
     <div class="biglogin" id="biglogin">
-        <span class="closelogin" onclick="closeLoginForm()">&times;</span>
+        <span class="closelogin" id="closeLogin" >&times;</span>
         <div class="container" id="smalllogin">
 
 
             <div class="form-container sign-in-container">
 
-                <form action="#">
+                <form class="LoginForm" action="#">
                     <h1>Sign up</h1>
                     <div class="social-container">
                         <div class="fab"><img class="fab-image" src="Image/facebook.png"></div>
@@ -62,9 +63,50 @@
                     <input id="password" class="input-profile" type="password" placeholder="Password" oninput="validateField('password')" />
                     <span id="passwordError" class="error-message"></span>
 
-                    <a href="#">Forgot your password?</a>
                     <button class="formbutton" id="submitprofile" onclick="validateForm()">Sign In</button>
                 </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="settingsModal" class="modalNew">
+        <div class="modal-content-New">
+            <div class="left-modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="profileImage" class="profile-image" src="#" alt="Profile Image">
+                <input id="newImage" type="file" accept="image/*">
+                <div class="input-group">
+                    <label class="labelLogin" for="newName">New Name:</label>
+                    <input id="newName" class="input-login" type="text" required placeholder="New Name">
+                </div>
+                <div class="input-group">
+                    <label class="labelLogin" for="newEmail">New Email:</label>
+                    <input id="newEmail" class="input-login" type="email" required placeholder="New Email">
+                </div>
+                <div class="input-group">
+                    <label class="labelLogin" for="newPassword">New Password:</label>
+                    <input id="newPassword" class="input-login" type="password" required placeholder="New Password">
+                </div>
+            </div>
+            <div class="right-modal">
+                <img  class="oldProfileImage" src="Image/profile-picture.png" alt="Profile Image">
+                <div class="input-group">
+                    <label class="labelLogin" for="oldName">Old Name:</label>
+                    <input id="oldName" class="input-login" type="text" required placeholder="" readonly>
+                </div>
+                <div class="input-group">
+                    <label class="labelLogin" for="oldEmail">Old Email:</label>
+                    <input id="oldEmail" class="input-login" type="email" placeholder="" required readonly>
+                </div>
+                <div class="input-group">
+                    <label class="labelLogin" for="oldPassword" >Old Password:</label>
+                    <input id="oldPassword" class="input-login" type="password" placeholder="" required readonly>
+                </div>
+            </div>
+            <div class="loginbutton">
+                <button class="newProfile" id="newProfile" onclick="" >Save Changes</button>
+                <button class="removeProfile" id="deleteProfileBtn" >Delete Profile</button>
+
             </div>
         </div>
     </div>

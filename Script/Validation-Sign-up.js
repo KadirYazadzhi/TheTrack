@@ -328,11 +328,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Вашият съществуващ код
 
     const closeLoginButton = document.getElementById('closeLogin');
+    const login = document.getElementById('smalllogin');
     const loginModal = document.getElementById('biglogin');
 
     if (closeLoginButton) {
         closeLoginButton.addEventListener('click', function () {
             loginModal.style.display = 'none';
+            login.style.display = 'none';
         });
     }
 

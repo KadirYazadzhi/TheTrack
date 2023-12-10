@@ -205,20 +205,19 @@ z-index: 1000;
 }
 
 /* Стилове за формата и бутоните */
-form {
+.cartForm {
     display: grid;
     grid-gap: 16px;
 }
 
-label {
+.cartLabel {
     font-weight: bold;
     margin-bottom: 8px;
     display: block;
     color: #2c3e50;
 }
 
-input,
-textarea {
+.cartInput {
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
@@ -290,6 +289,7 @@ input[type="radio"]:checked {
 }
 
 #messageModal .modal-content {
+    margin: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

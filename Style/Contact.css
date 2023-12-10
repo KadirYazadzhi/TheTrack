@@ -10,7 +10,7 @@
 body,
 input,
 textarea {
-    font-family: "Poppins", sans-serif;
+    font-family: "Istok Web", sans-serif;
 
 }
 .contact-section {
@@ -20,6 +20,7 @@ textarea {
     width: 100%;
     color: #FFFFFF;
 }
+
 .container {
     position: relative;
     width: 100%;

@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-        openCookieModal();
-    }, 5000);
+    // Проверете дали потребителят е вече приел бисквитките
+    if (!localStorage.getItem('cookiesAccepted')) {
+        // Ако не е, покажете модалния прозорец след 5 секунди
+        setTimeout(function() {
+            openCookieModal();
+        }, 5000);
+    }
 });
 
 function openCookieModal() {
@@ -29,13 +33,15 @@ function openCookieModal() {
     })
 
     acceptButton.addEventListener('click', function() {
+        // При приемане на бисквитките, запишете информацията в local storage
+        localStorage.setItem('cookiesAccepted', true);
         modal.style.display = 'none';
     });
 
     rejectButton.addEventListener('click', function() {
         modalcookie.style.border = '2px solid red';
         modalcookie.style.boxShadow = '2px 2px 10px #FF0000FF';
-        alert('Нямате възможност за отказване от бисвитките в сайта. ' +
+        alert('Нямате възможност за отказване от бисквитките в сайта. ' +
             'Моля приемете ги!')
         modalText.style.color = '#FF0000FF'
         modalText.style.fontWeight = '600'
@@ -44,9 +50,9 @@ function openCookieModal() {
         acceptButton.style.color = 'white'
     });
 
-
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
+            // Закрийте модалния прозорец, ако потребителят кликне извън него
             modal.style.display = 'none';
         }
     });

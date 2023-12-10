@@ -57,3 +57,43 @@ $(".js-fav").on("click", function() {
 
 
 
+
+
+// Function to show the modal
+function showModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+    var modal = document.getElementById('myModal');
+    modal.style.display = 'none';
+}
+
+// Function to handle "ADD TO CART" button click
+function ShowCopyModal () {
+    const textModal = document.getElementById('textModal')
+    const butttonModal = document.getElementById('buttonModal')
+    textModal.style.color = 'white'
+    textModal.innerHTML = 'Изберете времетраене преди да добавите в количката!'
+    butttonModal.innerHTML = 'ОК'
+    showModal();
+}
+function addToCart() {
+    // Check which radio button is selected
+    const selectedProduct = document.querySelector('input[type = "radio"]:checked');
+
+
+    if (selectedProduct) {
+        // Show the modal when a radio button is selected
+        showModal();
+    } else {
+       ShowCopyModal()
+    }
+
+}
+
+
+
+

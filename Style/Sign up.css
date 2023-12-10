@@ -26,6 +26,8 @@
 
 
 .formbutton {
+    margin-top: 20px;
+    border: 0;
     border-radius: 20px;
     background: rgb(0,255,218);
     background: linear-gradient(90deg, rgb(2, 229, 196) 0%, rgb(37, 35, 215) 100%);
@@ -50,7 +52,8 @@
     outline: none;
 }
 
-form {
+.LoginForm {
+    grid-gap: 0;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -129,14 +132,9 @@ form {
     color: red;
 }
 
-.input-profile {
-    border: 2px solid transparent;
-}
 
-.error {
-    border: 2px solid #fd0000;
-    background-color: #ffeded; /* Цвят на фона при грешка */
-}
+
+
 
 .valid {
     border: 2px solid green;
@@ -223,15 +221,13 @@ form {
     margin-bottom: 20px;
 }
 
-label {
+.labelLogin {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+.input-login {
     width: calc(100% - 22px);
     padding: 10px;
     margin-top: 5px;
@@ -244,9 +240,7 @@ input[type="password"] {
     z-index: 1;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
+.input-login:focus {
     border-color: #4CAF50;
 }
 
@@ -258,7 +252,7 @@ input[type="password"]:focus {
 }
 
 /* Save and Delete Buttons */
-button {
+.newProfile {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -268,17 +262,27 @@ button {
     margin-right: 10px;
     transition: background-color 0.3s ease;
     z-index: 2;
+    font-size: 1rem;
 }
 
-button:hover {
+.newProfile:hover {
     background-color: #45a049;
 }
 
-button:last-child {
+.removeProfile {
     background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    font-size: 1rem;
 }
 
-button:last-child:hover {
+.removeProfile:hover {
     background-color: #d32f2f;
 }
 
@@ -288,6 +292,9 @@ button:last-child:hover {
 }
 
 @media (max-width: 768px) {
+    .loginbutton {
+        margin: 0;
+    }
     .modal-content-New {
         display: flex;
         flex-direction: column;

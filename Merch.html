@@ -34,18 +34,18 @@
 
 
   <div class="profile">
-    <img  class="profile-picture" id="profilePicture" src="Image/profile-picture.png" href="#" data-target="#login" data-toggle="modal">
+    <img onclick="openModal()" class="profile-picture" id="profilePicture" src="Image/profile-picture.png"  data-target="#login" data-toggle="modal">
     <p class="username-profile" id="user">User</p>
   </div>
 
   <div class="biglogin" id="biglogin">
-    <span class="closelogin" onclick="closeLoginForm()">&times;</span>
+    <span class="closelogin" id="closeLogin" >&times;</span>
     <div class="container" id="smalllogin">
 
 
       <div class="form-container sign-in-container">
 
-        <form action="#">
+        <form class="LoginForm" action="#">
           <h1>Sign up</h1>
           <div class="social-container">
             <div class="fab"><img class="fab-image" src="Image/facebook.png"></div>
@@ -62,12 +62,54 @@
           <input id="password" class="input-profile" type="password" placeholder="Password" oninput="validateField('password')" />
           <span id="passwordError" class="error-message"></span>
 
-          <a href="#">Forgot your password?</a>
           <button class="formbutton" id="submitprofile" onclick="validateForm()">Sign In</button>
         </form>
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div id="settingsModal" class="modalNew">
+    <div class="modal-content-New">
+      <div class="left-modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="profileImage" class="profile-image" src="#" alt="Profile Image">
+        <input id="newImage" type="file" accept="image/*">
+        <div class="input-group">
+          <label class="labelLogin" for="newName">New Name:</label>
+          <input id="newName" class="input-login" type="text" required placeholder="New Name">
+        </div>
+        <div class="input-group">
+          <label class="labelLogin" for="newEmail">New Email:</label>
+          <input id="newEmail" class="input-login" type="email" required placeholder="New Email">
+        </div>
+        <div class="input-group">
+          <label class="labelLogin" for="newPassword">New Password:</label>
+          <input id="newPassword" class="input-login" type="password" required placeholder="New Password">
+        </div>
+      </div>
+      <div class="right-modal">
+        <img  class="oldProfileImage" src="Image/profile-picture.png" alt="Profile Image">
+        <div class="input-group">
+          <label class="labelLogin" for="oldName">Old Name:</label>
+          <input id="oldName" class="input-login" type="text" required placeholder="" readonly>
+        </div>
+        <div class="input-group">
+          <label class="labelLogin" for="oldEmail">Old Email:</label>
+          <input id="oldEmail" class="input-login" type="email" placeholder="" required readonly>
+        </div>
+        <div class="input-group">
+          <label class="labelLogin" for="oldPassword" >Old Password:</label>
+          <input id="oldPassword" class="input-login" type="password" placeholder="" required readonly>
+        </div>
+      </div>
+      <div class="loginbutton">
+        <button class="newProfile" id="newProfile" onclick="" >Save Changes</button>
+        <button class="removeProfile" id="deleteProfileBtn" >Delete Profile</button>
+
+      </div>
+    </div>
+  </div>
+
 
 
   <a href="index.html" class="hl"></a>
@@ -102,24 +144,24 @@
     <div class="modal-content" id="namemodal">
       <span class="close" id="closeNameModal">&times;</span>
       <h2>Checkout</h2>
-      <form id="checkoutForm" data-firstname="" data-lastname="" data-phonenumber="" data-address="" data-deliveryprovider="">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
+      <form class="cartForm" id="checkoutForm" data-firstname="" data-lastname="" data-phonenumber="" data-address="" data-deliveryprovider="">
+        <label class="cartLabel" for="firstName">First Name:</label>
+        <input class="cartInput" type="text" id="firstName" name="firstName" required>
         <span id="firstNameError" class="error"></span>
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
+        <label class="cartLabel" for="lastName">Last Name:</label>
+        <input class="cartInput" type="text" id="lastName" name="lastName" required>
         <span id="lastNameError" class="error"></span>
 
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+        <label class="cartLabel" for="phoneNumber">Phone Number:</label>
+        <input class="cartInput" type="tel" id="phoneNumber" name="phoneNumber" required>
         <span id="phoneNumberError" class="error"></span>
 
-        <label for="address">Address:</label>
-        <textarea id="address" name="address" required></textarea>
+        <label class="cartLabel" for="address">Address:</label>
+        <textarea class="cartInput" id="address" name="address" required></textarea>
         <span id="addressError" class="error"></span>
 
-        <label>Delivery Provider:</label>
+        <label class="cartLabel">Delivery Provider:</label>
         <label class="radio-container">
           <input type="radio" name="deliveryProvider" value="Ekont" checked>
           <span class="checkmark"></span>
@@ -131,10 +173,10 @@
           Speedy
         </label>
 
-        <label for="totalPrice">Total Price:</label>
-        <input type="text" id="totalPriceCheckout" name="totalPrice" readonly>
+        <label class="cartLabel" for="totalPrice">Total Price:</label>
+        <input class="cartInput" type="text" id="totalPriceCheckout" name="totalPrice" readonly>
 
-        <button id="next" type="button">Next</button>
+        <button class="buttonCheckout" id="next" type="button">Next</button>
       </form>
     </div>
 
@@ -153,24 +195,24 @@
             <img class="img-box-small" src="Image/card-1.png">
           </div>
         </div>
-        <form id="cardForm">
-          <label for="cardNumber">Card Number:</label>
-          <input type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
+        <form class="cartForm" id="cardForm">
+          <label class="cartLabel" for="cardNumber">Card Number:</label>
+          <input class="cartInput" type="text" id="cardNumber" name="cardNumber" placeholder="Enter your card number" required>
           <span id="cardNumberError" class="error"></span>
 
-          <label for="cardHolder">Card Holder:</label>
-          <input type="text" id="cardHolder" name="cardHolder" placeholder="Enter the card holder's name" required>
+          <label class="cartLabel" for="cardHolder">Card Holder:</label>
+          <input class="cartInput" type="text" id="cardHolder" name="cardHolder" placeholder="Enter the card holder's name" required>
           <span id="cardHolderError" class="error"></span>
 
-          <label for="expiryDate">Expiry Date:</label>
-          <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+          <label class="cartLabel" for="expiryDate">Expiry Date:</label>
+          <input class="cartInput" type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
           <span id="expiryDateError" class="error"></span>
 
-          <label for="cvv">CVV:</label>
-          <input type="text" id="cvv" name="cvv" placeholder="Enter the CVV" required>
+          <label class="cartLabel" for="cvv">CVV:</label>
+          <input class="cartInput" type="text" id="cvv" name="cvv" placeholder="Enter the CVV" required>
           <span id="cvvError" class="error"></span>
 
-          <button type="button" id="payNowButton">Pay Now</button>
+          <button class="buttonCheckout" type="button" id="payNowButton">Pay Now</button>
         </form>
       </div>
     </div>

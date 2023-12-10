@@ -65,16 +65,7 @@ body {
     cursor: pointer;
 }
 
-h1 {
-    display: table;
-    margin: 5% auto 0;
-    text-transform: uppercase;
-    font-family: "Anaheim", sans-serif;
-    font-size: 4em;
-    font-weight: 400;
-    text-shadow: 0 1px white, 0 2px black;
-}
-.container {
+.GalleryContainer {
     margin: 4% auto;
     width: 210px;
     height: 140px;
@@ -199,7 +190,7 @@ img:hover {
         transform: rotateY(320deg) translateZ(276px);
     }
 
-    .container {
+    .GalleryContainer {
         margin: 4% auto;
         width: 90px;
         height: 20px;
