@@ -45,7 +45,6 @@
 <nav class="nav">
     <i class="uil uil-bars navOpenBtn"></i>
 
-
     <div class="profile">
         <img onclick="openModal()" class="profile-picture" id="profilePicture" src="Image/profile-picture.png"  data-target="#login" data-toggle="modal">
         <p class="username-profile" id="user">User</p>
@@ -84,21 +83,21 @@
     <div id="settingsModal" class="modalNew">
         <div class="modal-content-New">
             <div class="left-modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="profileImage" class="profile-image" src="#" alt="Profile Image">
-            <input id="newImage" type="file" accept="image/*">
-            <div class="input-group">
-                <label class="labelLogin" for="newName">New Name:</label>
-                <input id="newName" class="input-login" type="text" required placeholder="New Name">
-            </div>
-            <div class="input-group">
-                <label class="labelLogin" for="newEmail">New Email:</label>
-                <input id="newEmail" class="input-login" type="email" required placeholder="New Email">
-            </div>
-            <div class="input-group">
-                <label class="labelLogin" for="newPassword">New Password:</label>
-                <input id="newPassword" class="input-login" type="password" required placeholder="New Password">
-            </div>
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="profileImage" class="profile-image" src="#" alt="Profile Image">
+                <input id="newImage" type="file" accept="image/*">
+                <div class="input-group">
+                    <label class="labelLogin" for="newName">New Name:</label>
+                    <input id="newName" class="input-login" type="text" required placeholder="New Name">
+                </div>
+                <div class="input-group">
+                    <label class="labelLogin" for="newEmail">New Email:</label>
+                    <input id="newEmail" class="input-login" type="email" required placeholder="New Email">
+                </div>
+                <div class="input-group">
+                    <label class="labelLogin" for="newPassword">New Password:</label>
+                    <input id="newPassword" class="input-login" type="password" required placeholder="New Password">
+                </div>
             </div>
             <div class="right-modal">
                 <img  class="oldProfileImage" src="Image/profile-picture.png" alt="Profile Image">
@@ -116,12 +115,13 @@
                 </div>
             </div>
             <div class="loginbutton">
-            <button class="newProfile" id="newProfile" onclick="" >Save Changes</button>
+                <button class="newProfile" id="newProfile" onclick="" >Save Changes</button>
                 <button class="removeProfile" id="deleteProfileBtn" >Delete Profile</button>
 
             </div>
         </div>
     </div>
+
 
 
     <a href="index.html" class="hl"></a>
@@ -778,9 +778,9 @@
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script type="text/javascript" src="Script/Validation-Sign-up.js"></script>
 <script type="text/javascript" src="Script/Double-click.js"></script>
 <script src="Script/script.js"></script>
-<script src="Script/Validation-Sign-up.js"></script>
 <script src="Script/Cookies.js"></script>
 <script type="text/javascript" src="Script/Navbar.js"></script>
 <script type="text/javascript" src="Script/Source%20Code.js"></script>

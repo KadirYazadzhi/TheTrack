@@ -128,3 +128,64 @@ document.onkeydown = e => {
     }
 };
 
+
+
+
+
+
+
+
+
+
+
+// Отваря модалния прозорец
+function openFancyModalRinoSinus() {
+    var modal = document.getElementById('fancyModalRimo');
+    modal.style.display = 'block';
+}
+
+// Затваря модалния прозорец
+function closeFancyModalRinoSinus() {
+    var modal = document.getElementById('fancyModalRimo');
+    modal.style.display = 'none';
+}
+
+// Отваря модалния прозорец - 2
+function openFancyModalBell() {
+    var modal = document.getElementById('fancyModalBell');
+    modal.style.display = 'block';
+}
+
+// Затваря модалния прозорец - 2
+function closeFancyModalBell() {
+    var modal = document.getElementById('fancyModalBell');
+    modal.style.display = 'none';
+}
+
+
+
+// Отваря модалния прозорец - 3
+function openFancyModalSodi() {
+    var modal = document.getElementById('fancyModalSodi');
+    modal.style.display = 'block';
+}
+
+// Затваря модалния прозорец - 3
+function closeFancyModalSodi() {
+    var modal = document.getElementById('fancyModalSodi');
+    modal.style.display = 'none';
+}
+
+
+
+// Отваря модалния прозорец - 3
+function openFancyModalOMP() {
+    var modal = document.getElementById('fancyModalOMP');
+    modal.style.display = 'block';
+}
+
+// Затваря модалния прозорец - 3
+function closeFancyModalOMP() {
+    var modal = document.getElementById('fancyModalOMP');
+    modal.style.display = 'none';
+}

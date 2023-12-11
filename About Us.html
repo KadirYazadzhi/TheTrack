@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="Style/Animation.css">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css'>
 </head>
-<body >
+<body  >
 <nav class="nav">
   <i class="uil uil-bars navOpenBtn"></i>
 
@@ -133,6 +133,37 @@
     <input type="text" placeholder="Search here..." />
   </div>
 </nav>
+//Модален прозорец 1 - Rimo Sinus Ion
+<div id="fancyModalRimo" class="fancy-modal">
+  <span class="fancy-close" onclick="closeFancyModalRinoSinus()">&times;</span>
+  <div class="fancy-modal-content">
+    <img src="Снимки/kart-6.png" alt="Картове">
+  </div>
+</div>
+
+  //Модален прозорец 2 - Bell KC-7 CMR Lewis Hamilton
+  <div id="fancyModalBell" class="fancy-modal">
+    <span class="fancy-close" onclick="closeFancyModalBell()">&times;</span>
+    <div class="fancy-modal-content-Bell">
+      <img src="Снимки/kaska-8.png" alt="Картове">
+    </div>
+</div>
+
+//Модален прозорец 3 - Bell KC-7 CMR Lewis Hamilton
+<div id="fancyModalSodi" class="fancy-modal">
+  <span class="fancy-close" onclick="closeFancyModalSodi()">&times;</span>
+  <div class="fancy-modal-content">
+    <img src="Снимки/kart-2.png" alt="Картове">
+  </div>
+</div>
+
+//Модален прозорец 4 - OMP Sport
+<div id="fancyModalOMP" class="fancy-modal">
+  <span class="fancy-close" onclick="closeFancyModalOMP()">&times;</span>
+  <div class="fancy-modal-content-OMP">
+    <img src="Снимки/suit-6.png" alt="Картове">
+  </div>
+</div>
 
 <div class="responsive-container-block bigContainer">
   <div class="responsive-container-block Container">
@@ -148,7 +179,7 @@
         Уважаеми клиенти, ние сме от учебно-тренировъчна фирма <b>„The Track“</b> ООД от Професионална гимназия по икономика „Иван Илиев“, Благоевград. Основната ни дейност е свързана с предлагането на го-картове и писти под наем, както и продажбате на висококачествено оборудване за картинг.
       </p>
       <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-        <div class="cardImgContainer">
+        <div class="cardImgContainer" onclick="openFancyModalRinoSinus()">
           <img class="cardImg" src="Снимки/kart-6.png">
         </div>
         <div class="cardText">
@@ -161,7 +192,7 @@
         </div>
       </div>
       <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-        <div class="cardImgContainer">
+        <div class="cardImgContainer" onclick="openFancyModalBell()">
           <img class="cardImg-product" src="Снимки/kaska-8.png">
         </div>
         <div class="cardText">
@@ -174,7 +205,7 @@
         </div>
       </div>
       <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-        <div class="cardImgContainer">
+        <div class="cardImgContainer" onclick="openFancyModalSodi()">
           <img class="cardImg" src="Снимки/kart-2.png">
         </div>
         <div class="cardText">
@@ -187,7 +218,7 @@
         </div>
       </div>
       <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
-        <div class="cardImgContainer">
+        <div class="cardImgContainer" onclick="openFancyModalOMP()">
           <img class="cardImg" src="Снимки/suit-6.png">
         </div>
         <div class="cardText">
