@@ -1064,8 +1064,8 @@ body {
         max-width: 900px;
     }
     .fancy-modal-content-Bell {
-        margin-top: 50%;
-        margin-bottom: 50%;
+        margin-top: 30%;
+        margin-bottom: 30%;
         margin-right: 20px;
         margin-left: 20px;
         display: block;
@@ -1073,8 +1073,8 @@ body {
         max-width: 600px;
     }
     .fancy-modal-content-OMP {
-        margin-top: 50%;
-        margin-bottom: 50%;
+        margin-top: 30%;
+        margin-bottom: 30%;
         display: block;
         width: 100%;
         max-width: 600px;
