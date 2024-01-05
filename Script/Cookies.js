@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Проверете дали потребителят е вече приел бисквитките
     if (!localStorage.getItem('cookiesAccepted')) {
-        // Ако не е, покажете модалния прозорец след 5 секунди
         setTimeout(function() {
             openCookieModal();
-        }, 5000);
+        }, 14000);
     }
 });
 

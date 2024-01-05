@@ -1,17 +1,17 @@
 // Получаваме референции към елементите
-const modal = document.getElementById('doubleClickModal-ZampRZ-42');
+const BigModal = document.getElementById('doubleClickModal-ZampRZ-42');
 const acceptButton = document.getElementById('acceptButton-ZampRZ-42');
 const cancelButton = document.getElementById('cancelButton-ZampRZ-42');
 const myElement = document.getElementById('Zamp-RZ42');
 
 // Функция за отваряне на модалното прозорче
 function openModalZampRZ42() {
-    modal.style.display = 'block';
+    BigModal.style.display = 'block';
 }
 
 // Функция за затваряне на модалното прозорче
 function closeModalZampRZ42() {
-    modal.style.display = 'none';
+    BigModal.style.display = 'none';
 }
 
 // Обработка на двойно кликване върху елемента

@@ -225,29 +225,35 @@
       <span class="circle one"></span>
       <span class="circle two"></span>
 
-      <form autocomplete="off" action="mailto:kyuya_2020g@pgiblg.com" method="post" enctype="text/plain">
+      <form autocomplete=on >
         <h3 class="title">Contact us</h3>
         <div class="input-container">
-          <input type="text" name="name" class="input"  />
-          <label for="">Username</label>
+          <input oninput="ValidateName()" id="username" type="text" name="Username" class="input" />
+          <p id="usernameError" class="error-text"></p>
+          <label for="username">Username</label>
           <span>Username</span>
         </div>
         <div class="input-container">
-          <input type="email" name="email" class="input" />
-          <label for="">Email</label>
+          <input oninput="ValidateEmail()" id="emailNew" type="email" name="Email" class="input" />
+          <p id="emailNewError" class="error-text"></p>
+          <label for="emailNew">Email</label>
           <span>Email</span>
         </div>
         <div class="input-container">
-          <input type="tel" name="phone" class="input" />
-          <label for="">Phone</label>
+          <input oninput="ValidatePhone()" id="phone" type="tel" name="Phone" class="input" />
+          <p id="phoneError" class="error-text"></p>
+          <label for="phone">Phone</label>
           <span>Phone</span>
         </div>
         <div class="input-container textarea">
-          <textarea name="message" class="input"></textarea>
-          <label for="">Message</label>
+          <textarea oninput="ValidateMessage()" id="message" name="Message" class="input"></textarea>
+          <p id="messageError" class="error-text"></p>
+          <label for="message">Message</label>
           <span>Message</span>
         </div>
-        <input type="submit" value="Send" class="btn" onclick="submit_comment()" />
+        <button type="button" class="btn" onclick="submitForm()">Send</button>
+
+
       </form>
     </div>
   </div>

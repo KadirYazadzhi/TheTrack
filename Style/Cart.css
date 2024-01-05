@@ -221,12 +221,31 @@ z-index: 1000;
     width: 100%;
     padding: 12px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
     color: #333;
+    background-color: #fafdff;
+    border: 1px solid #1c89d2;
+    outline: none;
+    box-shadow: 1px 1px 5px #0e7ac2;
+    resize: vertical;
+    max-height: 120px;
 }
+.cartInput:hover {
+    background-color: #eef8ff;
+    border: 2px solid #1c89d2;
+    outline: none;
+    transform: scale(1.02);
+    transition: 0.2s;
+    box-shadow: 1px 1px 10px #0e7ac2;
+}
+.cartInput:focus {
+    transform: none;
+    box-shadow: 1px 1px 5px #0e7ac2;
+    border: 3px solid #1187d7;
+    background-color: #dcf0ff;
 
+}
 input[type="radio"] {
     margin-right: 8px;
     appearance: none;
@@ -382,8 +401,44 @@ input[type="radio"]:checked {
 
 /* Стилове за червени граници на полетата за въвеждане */
 input.error, textarea.error {
-    border: 1px solid red;
+    border: 2px solid red;
+    box-shadow: 1px 1px 5px #fd0000;
+    background-color: #ffeded;
+    transform: none;
+    outline: none;
+}
+input.error:hover, textarea.error:hover {
+    border: 2px solid red;
+    box-shadow: 1px 1px 5px #fd0000;
+    background-color: #ffeded;
+    transform: none;
+    outline: none;
+}
+input.error:focus, textarea.error:focus {
+    border: 2px solid red;
+    box-shadow: 1px 1px 5px #fd0000;
+    background-color: #ffeded;
+    transform: none;
+    outline: none;
 }
 .valid {
     border: 2px solid green;
+    transform: none;
+    outline: none;
+    box-shadow: 1px 1px 5px #008000FF;
+    background-color: #ecffec;
+}
+.valid:hover {
+    border: 2px solid green;
+    transform: none;
+    outline: none;
+    box-shadow: 1px 1px 5px #008000FF;
+    background-color: #ecffec;
+}
+.valid:focus {
+    border: 2px solid green;
+    transform: none;
+    outline: none;
+    box-shadow: 1px 1px 5px #008000FF;
+    background-color: #ecffec;
 }
