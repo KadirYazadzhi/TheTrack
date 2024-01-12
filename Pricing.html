@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Track">
+    <meta name="keywords" content="The Track, Track, Kart, Karting, Картинг, Картове, Писти, Оборудване за картинг">
+    <meta name="author" content="Kadir Yazadzhi">
+    <link rel="icon" href="Снимки/home-logo-official.png" type="image/x-icon" >
+    <meta http-equiv="content-language" content="bg">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="The Track">
+    <meta property="og:description" content="The Track is an educational training company for the sale of karting equipment and the rental of tracks">
+    <meta property="og:image" content="Снимки/home-logo-official.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="Style/Pricing.css">
+
+    <title>Pricing</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="back" class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+<form id="form">
+    <h3>Login Here</h3>
+
+    <label for="username">Username</label>
+    <input class="input" oninput="validateName()" type="text" placeholder="Name" id="username">
+    <p id="usernameError" class="error-text"></p>
+
+    <label for="password">Password</label>
+    <input class="input" oninput="validatePassword()" type="password" placeholder="Password" id="password">
+    <p id="passwordError" class="error-text"></p>
+
+    <button type="button" class="button" onclick="ValidateForm()">Log In</button>
+    <div class="social">
+        <div class="go"><i class="fab fa-google"></i>  Google</div>
+        <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+    </div>
+
+</form>
+<h1 id="nameText"></h1>
+
+<table id="table-New">
+    <tr>
+<th>Дадени средства</th>
+        <th>Оставащи за даване средства</th>
+    </tr>
+    <tr>
+        <td id="priceOn"></td>
+        <td id="PriceOff"></td>
+    </tr>
+</table>
+<h2 id="textInfo">Информация за продукти</h2>
+<table id="table">
+    <tr>
+        <th>Наличност</th>
+        <th>Продукти</th>
+        <th>Брой</th>
+        <th>Цени (общо)</th>
+        <th>Цена за бр.</th>
+    </tr>
+    <tr>
+        <td>Не</td>
+        <td>Тениски</td>
+        <td>13</td>
+        <td>169,00 лв.</td>
+        <td>13,00 лв.</td>
+    </tr>
+    <tr>
+        <td>Да</td>
+        <td>Магнити</td>
+        <td>20</td>
+        <td>36,00 лв.</td>
+        <td>1,50 лв.</td>
+    </tr>
+    <tr>
+        <td>Не</td>
+        <td>Фриз</td>
+        <td>1</td>
+        <td>40,00 лв.</td>
+        <td>40,00 лв.</td>
+    </tr>
+    <tr>
+        <td>Не</td>
+        <td>Винил</td>
+        <td>1</td>
+        <td>135,00 лв.</td>
+        <td>135,00 лв.</td>
+    </tr>
+    <tr>
+        <td>Не</td>
+        <td>Бисквитки</td>
+        <td>35</td>
+        <td>52,50 лв.</td>
+        <td>1,50 лв.</td>
+    </tr>
+    <tr>
+        <td>Да</td>
+        <td>Химикали</td>
+        <td>100</td>
+        <td>26,00 лв.</td>
+        <td>0,26 лв.</td>
+    </tr>
+    <tr>
+        <td>Да</td>
+        <td>Печат</td>
+        <td>1</td>
+        <td>35,00 лв.</td>
+        <td>35,00 лв.</td>
+    </tr>
+    <tr>
+        <td>Да</td>
+        <td>Колички</td>
+        <td>24</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Да</td>
+        <td>Кл. Държатели</td>
+        <td>50</td>
+        <td>59,00 лв.</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Да</td>
+        <td>Отливки</td>
+        <td>1</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>Да</td>
+        <td>Визитки</td>
+        <td>120</td>
+        <td>17,00 лв.</td>
+        <td>0,14 лв.</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align:right;"><strong>Общо за всичко</strong></td>
+        <td><strong>569,50 лв.</strong></td>
+    </tr>
+</table>
+
+</body>
+<script type="text/javascript" src="Script/Pricing.js"></script>
+</html>

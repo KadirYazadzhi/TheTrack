@@ -1080,3 +1080,18 @@ body {
         max-width: 600px;
     }
 }
+
+
+
+
+.other-text {
+    text-align: right;
+    color: #000341;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+.other-text:hover {
+    color: #0014ff;
+}
