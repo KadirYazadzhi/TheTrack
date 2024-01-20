@@ -17,6 +17,12 @@ body{
     left: 50%;
     top: 50%;
 }
+@media (max-width: 768px) {
+    .background {
+        width: 80%;
+        height: 100%;
+    }
+}
 .background .shape{
     height: 200px;
     width: 200px;
@@ -71,7 +77,6 @@ form{
     form {
         width: 95%;
         height: 70%;
-        margin: 20px;
     }
 }
 
@@ -153,41 +158,42 @@ label{
 
 
 
-
 #nameText {
     margin: 20px;
     text-align: center;
     color: #0a2a46;
 }
+
 #textInfo {
     margin: 20px;
     text-align: center;
 }
-#table, #table-New {
+
+#table,
+#table-New {
     display: none;
     position: relative;
-    width: 32%; /* Променете спрямо вашите предпочитания */
-    margin: 10px auto; /* Добавете този ред, за да центрирате таблицата */
+    width: 32%; /* Change according to your preferences */
+    margin: 10px auto; /* Add this line to center the table */
     border-collapse: collapse;
     background-color: #fff;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 @media (max-width: 768px) {
-    #table {
+    #table,
+    #table-New {
         width: 90%;
         margin: 0;
     }
-    #table-New {
-        width: 90%;
-        margin: 20px;
-    }
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 10px; /* Adjust padding for smaller screens */
     text-align: left;
 }
 
