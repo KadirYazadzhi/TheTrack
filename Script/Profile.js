@@ -15,3 +15,22 @@ closeBtn.forEach(function (element, index) {
         card.classList.remove('active');
     });
 });
+
+const btnActivate = document.getElementById('language');
+const btnActivateNew = document.getElementById('language-new');
+const languageHidden = document.getElementById('language-hidden');
+const languageHiddenNew = document.getElementById('language-hidden-new');
+btnActivate.addEventListener('mouseover',function (e) {
+    languageHidden.style.display = 'block';
+});
+btnActivate.addEventListener('mouseleave',function (e) {
+    languageHidden.style.display = 'none';
+});
+
+
+btnActivateNew.addEventListener('mouseover',function (e) {
+    languageHiddenNew.style.display = 'block';
+});
+btnActivateNew.addEventListener('mouseleave',function (e) {
+    languageHiddenNew.style.display = 'none';
+});

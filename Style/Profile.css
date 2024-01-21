@@ -21,11 +21,36 @@ a:hover {
 
 .icon {
     display: inline-block;
-    width: 4em;
-    height: 4em;
+    width: 3.8em;
+    height: 3.8em;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+}
+.language-hidden {
+    width: 500px;
+    height: 90px;
+    border-radius: 20px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    bottom: 370px;
+}
+.language-hidden-new {
+    width: 200px;
+    height: 90px;
+    border-radius: 20px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    bottom: 370px;
+    left: 60px;
+}
+.icon-language {
+    margin: 5px;
+    display: inline-block;
+    width: 4.2em;
+    height: 4.2em;
 }
 
 .wrapper {
