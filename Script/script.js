@@ -41,5 +41,3 @@ function removeActive() {
         ratings[i].classList.remove('active')
     }
 }
-
-

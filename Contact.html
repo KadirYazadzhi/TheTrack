@@ -225,8 +225,8 @@
       <span class="circle one"></span>
       <span class="circle two"></span>
 
-      <form autocomplete=on >
-        <h3 class="title">Contact us</h3>
+      <form autocomplete="on" onsubmit="emailSend(); reset(); return false">
+      <h3 class="title">Contact us</h3>
         <div class="input-container">
           <input oninput="ValidateName()" id="username" type="text" name="Username" class="input" />
           <p id="usernameError" class="error-text"></p>
@@ -251,7 +251,7 @@
           <label for="message">Message</label>
           <span>Message</span>
         </div>
-        <button type="button" class="btn" onclick="submitForm()">Send</button>
+        <button type="submit" class="btn" onclick="submitForm()">Send</button>
 
 
       </form>
@@ -297,12 +297,13 @@
       </button>
     </a>
     <div class="row">
-      Copyright © 2023 - All rights reserved || Designed By: <a style=" font-weight: 550;" href="Profile.html">Kadir Yazadzhi</a>
+      Copyright © 2024 - All rights reserved || Designed By: <a style=" font-weight: 550;" href="Profile.html">Kadir Yazadzhi</a>
     </div>
   </div>
 </footer>
 
 </body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script type="text/javascript" src="Script/Validation-Sign-up.js"></script>
 <script type="text/javascript" src="Script/Navbar.js"></script>
 <script type="text/javascript" src="Script/Contact.js"></script>

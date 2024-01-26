@@ -177,3 +177,20 @@ function submitForm() {
     }
 }
 
+
+
+
+function emailSend() {
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "gmsg7523@gmail.com\n",
+        Password : "8ECDABCEA4E4032B73A814FF05F138CCAAB6",
+        To : 'smx570751@gmail.com',
+        From : "gmsg7523@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+        message => alert(message)
+    );
+}
+
