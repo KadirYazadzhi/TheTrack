@@ -1,0 +1,346 @@
+.kaski-child a {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+}
+
+
+.li-image {
+    margin-right: 10px;
+    bottom: 6px;
+    position: relative;
+    width: 40px;
+    display: flex;
+    float: left;
+    align-items: center;
+    text-align: center;
+}
+.li-image-special {
+    margin-right: 30px;
+    left: 10px;
+    bottom: 6px;
+    position: relative;
+    width: 20px;
+    display: flex;
+    float: left;
+    align-items: center;
+    text-align: center;
+}
+
+/* Стилове за основния списък с каски */
+.kaski-list {
+    list-style-type: none;
+}
+
+.kaski {
+    position: relative;
+}
+
+/* Стилове за елементите в допълнителния списък */
+.kaski-children {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 400px; /* Размер на допълнителната кутия */
+    max-height: 600px;
+    background: rgb(52,216,255);
+    background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+    box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+    padding: 10px;
+    overflow: visible;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+/* Показване на допълнителния списък при hover върху основния */
+.kaski:hover .kaski-children {
+    display: block;
+}
+
+
+
+
+.gashterizon-child a {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+}
+
+.gashterizon-list {
+    list-style-type: none;
+}
+
+.gashterizon {
+    position: relative;
+}
+
+/* Стилове за елементите в допълнителния списък */
+.gashterizon-children {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 400px; /* Размер на допълнителната кутия */
+    max-height: 600px;
+    background: rgb(52,216,255);
+    background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+    box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+    padding: 10px;
+    overflow: visible;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+/* Показване на допълнителния списък при hover върху основния */
+.gashterizon:hover .gashterizon-children {
+    display: block;
+}
+
+
+
+
+.rukavici-child a {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+}
+
+.rukavici-list {
+    list-style-type: none;
+}
+
+.rukavici {
+    position: relative;
+}
+
+.rukavici-children {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 400px; /* Размер на допълнителната кутия */
+    max-height: 560px;
+    background: rgb(52,216,255);
+    background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+    box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+    padding: 10px;
+    overflow: visible;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+/* Показване на допълнителния списък при hover върху основния */
+.rukavici:hover .rukavici-children {
+    display: block;
+}
+
+
+
+.obuvki-child a {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+}
+
+.obuvki-list {
+    list-style-type: none;
+}
+
+.obuvki {
+    position: relative;
+}
+
+.obuvki-children {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 400px; /* Размер на допълнителната кутия */
+    max-height: 510px;
+    background: rgb(52,216,255);
+    background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+    box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+    padding: 10px;
+    overflow: visible;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+/* Показване на допълнителния списък при hover върху основния */
+.obuvki:hover .rukavici-children {
+    display: block;
+}
+
+
+
+
+
+.oborudvane-child a {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+}
+
+.oborudvane-list {
+    list-style-type: none;
+}
+
+.oborudvane {
+    position: relative;
+}
+
+.oborudvane-children {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 400px; /* Размер на допълнителната кутия */
+    max-height: 600px;
+    background: rgb(52,216,255);
+    background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+    box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Показване на допълнителния списък при hover върху основния */
+.oborudvane:hover .oborudvane-children {
+    display: block;
+}
+
+
+
+
+
+
+.aksesoari-child a {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+}
+
+.aksesoari-list {
+    list-style-type: none;
+}
+
+.aksesoari {
+    position: relative;
+}
+
+.aksesoari-children {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 400px; /* Размер на допълнителната кутия */
+    max-height: 420px;
+    background: rgb(52,216,255);
+    background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+    box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+/* Показване на допълнителния списък при hover върху основния */
+.aksesoari:hover .aksesoari-children {
+    display: block;
+}
+
+
+
+
+
+
+.box-child a {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+
+}
+
+
+.box-list {
+    list-style-type: none;
+}
+
+.box {
+    position: relative;
+}
+
+.box-children {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 400px; /* Размер на допълнителната кутия */
+    max-height: 420px;
+    background: rgb(52,216,255);
+    background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+    box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Показване на допълнителния списък при hover върху основния */
+.box:hover .box-children {
+    display: block;
+}
+
+
+.phone-box {
+    display: none;
+}
+
+@media (max-width: 768px){
+    .desktop {
+        display: none;
+    }
+    .phone-box {
+        display: block;
+    }
+    .phone-child a {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        text-decoration: none; /* Ако искате да премахнете декорацията на връзката */
+        list-style-type: none;
+
+    }
+
+
+    .phone-list {
+        list-style-type: none;
+    }
+
+    .phone {
+        position: relative;
+        list-style-type: none;
+    }
+
+    .phone-children {
+        display: block;
+        position: absolute;
+        margin-top: 6px;
+        top: 0;
+        width: 100%; /* Размер на допълнителната кутия */
+        max-height: 550px;
+        background: rgb(52,216,255);
+        background: linear-gradient(90deg, rgba(52,216,255,1) 0%, rgba(17,68,255,1) 41%, rgba(170,57,255,1) 100%);
+        box-shadow: 1px 1px 10px rgba(8, 46, 234, 0.5); /* Сянка */
+        padding: 10px;
+        border-radius: 10px;
+        overflow-y: scroll;
+        list-style-type: none;
+    }
+
+
+}

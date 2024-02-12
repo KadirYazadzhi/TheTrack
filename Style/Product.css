@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Istok Web", sans-serif;
+}
+main {
+    margin-bottom: 90px;
+}
+
+.box-product {
+    width: 60px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+}
+
+.product-text-area {
+    position: relative;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+
+}
+
+body {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+    border: 0;
+
+}
+.card {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    display: grid;
+    top: 80px;
+    left: 100px;
+    right: 0;
+    bottom: 0;
+    width: 310px;
+    height: 440px;
+    background: #191919;
+    border-radius: 20px;
+    overflow: hidden;
+    float: left;
+    margin:10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.09), 0 0 8px #17238d;
+
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgb(33,53,227);
+    background: linear-gradient(90deg, rgba(33,53,227,1) 0%, rgba(24,40,173,1) 35%, rgba(21,32,127,1) 100%);
+    transform: skewY(345deg);
+    transition: 0.5s;
+
+}
+
+.card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+
+}
+
+.card::after {
+    content: "The Track";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.1);
+    border-color: #ffffff;
+
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+
+.card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+
+}
+
+.card .contentBox h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #000000;
+    text-decoration: none;
+    background: rgb(0,237,255);
+    background: linear-gradient(90deg, rgb(0, 237, 255) 0%, rgba(0,60,255,1) 50%, rgba(0,36,153,1) 100%);
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.09), 0 0 8px #000bbb;
+}
+.card .contentBox .buy:hover {
+   color: white;
+    background: rgb(0,237,255);
+    background: linear-gradient(90deg, rgb(1, 42, 176) 0%, rgb(17, 73, 255) 50%, rgb(16, 237, 253) 100%);
+}
+
+.card:hover .contentBox .buy {
+    top: 0;
+    opacity: 1;
+}
+
+.mouse {
+    cursor: pointer;
+    height: 250px;
+    width: auto;
+}
+@media screen and (max-width: 768px) {
+    .card {
+        left: 30px;
+        float: none;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    section {
+
+        margin-left: 24px;
+
+    }
+    .card {
+        width: 290px;
+        height: 410px;
+        top: 20px;
+    }
+    .mouse {
+        height: 230px;
+        width: auto;
+    }
+    .card .contentBox h3 {
+        font-size: 16px;
+    }
+    .card .contentBox .price {
+        font-size: 22px;
+    }
+    .card .contentBox .buy {
+        padding: 10px 10px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

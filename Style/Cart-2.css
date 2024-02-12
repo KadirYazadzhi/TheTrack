@@ -1,0 +1,24 @@
+/* Стилизация на продукт в количката */
+.cart-product {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    margin: 10px;
+    z-index: 10;
+}
+
+
+/* Стилизация на бутоните за премахване от количката */
+.removeProduct {
+    cursor: pointer;
+}
+
+/* Медия заявка за екрани с ширина до 768px */
+@media (max-width: 768px) {
+    .cart-product {
+        width: 30px;
+        margin: 5px;
+    }
+
+
+}
