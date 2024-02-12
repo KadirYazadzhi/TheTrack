@@ -124,6 +124,7 @@
     background-color: #555;
 }
 .cart-product {
+    cursor: pointer;
     width: 50px;
     position: absolute;
     top: 0;

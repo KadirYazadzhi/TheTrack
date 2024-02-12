@@ -153,6 +153,7 @@ body {
 }
 
 .mouse {
+    cursor: pointer;
     height: 250px;
     width: auto;
 }

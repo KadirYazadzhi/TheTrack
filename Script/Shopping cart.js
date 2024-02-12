@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             productInfoElement.innerHTML =
                 '<strong>' + productName + '</strong> ' + productPrice.toFixed(2) + '</strong> лв.' +
                 '<br>Количество: <span class="quantity">' + product.quantity + '</span>' +
-                '<span class="removeProduct">&#10006; Премахни</span>';
+                '<span style="color: red" class="removeProduct">&#10006; Премахни</span>';
 
             productElement.appendChild(productInfoElement);
 
