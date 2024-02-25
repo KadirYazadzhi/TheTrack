@@ -10,7 +10,6 @@
 
 
 
-
 .panel-container {
     background-color: #12192c;
     box-shadow: 1px 1px 10px rgba(0, 85, 255, 0.5);
@@ -149,11 +148,11 @@
 
 
 .hover-cards {
+    background-color: white;
    max-width: 100%;
     height: 440px;
     position: relative;
     padding: 10px;
-    margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,12 +393,14 @@
     padding: 20px;
 }
 .title-novini{
+    background-color: white;
     font-size: 1.8em;
     font-weight: 600;
     color: black;
     text-align: center;
 }
 .novini-p {
+    background-color: white;
     font-size: 1.2em;
     text-align: center;
     padding: 20px;
@@ -582,6 +583,7 @@
 }
 
 .title-blog {
+    background-color: white;
     font-size: 1.8em;
     font-weight: 600;
     color: black;
@@ -590,6 +592,7 @@
 
 }
 .blog-p {
+    background-color: white;
     font-size: 1.2em;
     text-align: center;
     padding: 20px;
@@ -906,11 +909,11 @@
 
 
 .box {
+    background-color: white;
     display: block;
     width: 100%;
     height: 660px;
     padding: 20px;
-    background-color: #f0faff;
 
 
 }
@@ -1203,7 +1206,7 @@
 
 /* Стил на Features Section (с някои стилови подобрения) */
 .features {
-    background-color: #f9f9f9;
+    background-color: white;
     padding: 50px 0;
     display: flex;
     justify-content: space-around;
@@ -1278,8 +1281,9 @@
 
 /* Стил на Наши Клиенти секция */
 .our-clients  {
+    background-color: white;
     text-align: center;
-    margin: 50px 0;
+    padding: 50px 0;
 
 }
 
@@ -1302,8 +1306,9 @@
 }
 
 .about-us  {
+    background-color: white;
     text-align: center;
-    margin: 50px 0;
+    padding: 50px 0;
 }
 
 .about-us h2  {
@@ -1317,7 +1322,7 @@
 
 
 .client-logos img {
-   width: 100%;
+    width: 100%;
     height: 100%;
     max-width: 470px;
     max-height: 420px;
@@ -1327,8 +1332,10 @@
 
 }
 .client-logos img:hover {
+    cursor:pointer;
+    transition: 0.3s;
     position: relative;
-    transform: scale(1.05);
+    transform: scale(1.04);
 
 
 }
