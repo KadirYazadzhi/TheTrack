@@ -56,6 +56,6 @@ function changeTextKart415() {
     document.getElementById("Kart-4").textContent = "40 лв.";
 }
 function changeTextKart420() {
-    document.getElementById("Kart-4").textContent = "- лв.";
+    document.getElementById("Kart-4").textContent = "50 лв.";
 }
 
