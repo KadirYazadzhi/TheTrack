@@ -9,7 +9,7 @@ a {
     color: inherit;
 }
 .modal-new {
-    display: block;
+    display: none;
     overflow: hidden;
     align-items: center;
     align-content: center;
