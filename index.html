@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="Style/Animation.css">
     <link rel="stylesheet" href="Style/Cookies.css">
     <link rel="stylesheet" href="Style/Sign%20up.css">
+    <link rel="stylesheet" href="Style/SpecialAuthorCard.css">
+    <link rel="stylesheet" href="Style/Profile.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -42,6 +44,70 @@
         <button id="rejectButton">Отказвам</button>
     </div>
 </div>
+<div id="profile-modal" class="modal-new">
+    <article class="modal-container-new">
+        <header class="modal-container-header">
+			<span class="modal-container-title">
+				<svg aria-hidden="true" height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0 0h24v24H0z" fill="none"></path>
+					<path d="M14 9V4H5v16h6.056c.328.417.724.785 1.18 1.085l1.39.915H3.993A.993.993 0 0 1 3 21.008V2.992C3 2.455 3.449 2 4.002 2h10.995L21 8v1h-7zm-2 2h9v5.949c0 .99-.501 1.916-1.336 2.465L16.5 21.498l-3.164-2.084A2.953 2.953 0 0 1 12 16.95V11zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.954.954 0 0 0 .436-.795V13h-5v3.949z" fill="currentColor"></path>
+				</svg>
+				Авторско право
+			</span>
+            <button id="closeButton" class="icon-button">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" fill="currentColor"></path>
+                </svg>
+            </button>
+        </header>
+        <section class="modal-container-body rtf">
+            <div style="top: 11%" class="profile-card__img">
+                <img src="Image/programmer.png" alt="profile card">
+            </div>
+            <h2 style="text-align: center;">Кадир Язаджи</h2>
+            <br>
+            <br>
+            <span>Сайтът е създаден с учебна цел за УТФ "Дъ Трак", от Кадир Язаджи.</span>
+            <br>
+            <br>
+            <span>Всички текстове, изображения, графики, лога и други съдържания на този уебсайт са собственост на Кадир Язаджи и са защитени от законите за авторско право.</span>
+            <br>
+            <br>
+            <span>Всеки вид използване или репродукция на съдържанието от този уебсайт, включително копиране, разпространение, промяна или публично показване, е забранено без писменото разрешение.</span>
+
+
+                    <div class="profile-card-ctr">
+                        <button class="profile-card__button button--blue js-message-btn">Message</button>
+                        <button class="profile-card__button button--orange"><a style="color: #FFFFFF" href="https://kadiryazadzhi.github.io/portfolio/" target="_blank"> My Portfolio</a></button>
+                    </div>
+
+                <div class="profile-card-message js-message">
+                    <form class="profile-card-form">
+                        <div class="profile-card-form__container">
+                            <textarea placeholder="Say something..."></textarea>
+                        </div>
+
+                        <div class="profile-card-form__bottom">
+                            <button class="profile-card__button button--blue js-message-close">
+                                Send
+                            </button>
+
+                            <button class="profile-card__button button--gray js-message-close">
+                                Cancel
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="profile-card__overlay js-message-close"></div>
+                </div>
+
+
+        </section>
+    </article>
+</div>
+
+
 <nav class="nav">
     <i class="uil uil-bars navOpenBtn"></i>
     <div class="profile">
@@ -782,6 +848,7 @@
 <script src="Script/script.js"></script>
 <script src="Script/Cookies.js"></script>
 <script type="text/javascript" src="Script/Navbar.js"></script>
+<script type="text/javascript" src="Script/SpecialAuthorCard.js"></script>
 <script type="text/javascript" src="Script/Source%20Code.js"></script>
 
 </html>
