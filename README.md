@@ -1,14 +1,14 @@
-# TheTrack - Karting Training Company Website
+# 🏎️ TheTrack - Karting Training Company Website 🏁
 
 <div style="display:flex; flex-direction:row;">
 <img style="width:100%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/a1u89-9lzqs.jpg">
 </div>
 
-### Description
+### 📝 Description
 
-TheTrack is a website project created for educational purposes, aiming to provide a realistic overview of a karting training company website. The main goal of the project is to provide resources and information for the training company to showcase its services and attract potential clients.
+TheTrack is a simulated website project created for educational purposes, aiming to provide a realistic overview of a karting training company website. The main goal of the project is to provide resources and information for the training company to showcase its services and attract potential clients.
 
-## Key Features
+## 🚀 Key Features
 
 - **Home:** Introduces information about the company and its services.
 - **Services:** Section with photos and videos from races and training sessions.
@@ -16,7 +16,7 @@ TheTrack is a website project created for educational purposes, aiming to provid
 - **Contacts:** Includes a contact form and contact information.
 - **About Us:** Information about the company and its mission.
 
-## Technologies
+## 💻 Technologies
 
 - HTML
 - CSS
@@ -24,7 +24,7 @@ TheTrack is a website project created for educational purposes, aiming to provid
 - Vanilla CSS
 - JavaScript (optional)
 
-## Installation and Usage
+## 🛠️ Installation and Usage
 
 1. Clone this repository to your local machine.
 2. Open index.html in your web browser.
@@ -34,7 +34,7 @@ TheTrack is a website project created for educational purposes, aiming to provid
   
 1. Open this link: <a href="https://thetrackone.github.io/thetrack/index.html">https://thetrackone.github.io/thetrack/index.html</a>
 
-## Screenshots
+## 🖼️ Screenshots
 
 <div style="display:flex; flex-direction:row;">
 <img style="width:49%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/a81pw-88goc.png">
@@ -46,7 +46,7 @@ TheTrack is a website project created for educational purposes, aiming to provid
 <img style="width:49%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/al8r8-uxxt7.jpg">
 </div>
 
-## Contacts
+## 📞 Contacts
 
 For questions and additional information, please contact us at:
 
