@@ -22,7 +22,7 @@ TheTrack is a simulated website project created for educational purposes, aiming
 - CSS
 - Bootstrap
 - Vanilla CSS
-- JavaScript (optional)
+- JavaScript
 
 ## 🛠️ Installation and Usage
 
@@ -36,15 +36,11 @@ TheTrack is a simulated website project created for educational purposes, aiming
 
 ## 🖼️ Screenshots
 
-<div style="display:flex; flex-direction:row;">
-<img style="width:49%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/a81pw-88goc.png">
-<img style="width:49%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/aj0jd-5ynsu.jpg">
-</div>
 
-<div style="display:flex; flex-direction:row;">
-<img style="width:49%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/aej9f-tpkkg.jpg">
-<img style="width:49%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/al8r8-uxxt7.jpg">
-</div>
+<img src="Image/preview-thetrack-1.png">
+<img src="Image/preview-thetrack-2.png">
+<img src="Image/preview-thetrack-3.png">
+<img src="Image/preview-thetrack-4.png">
 
 ## 📱 Contacts
 This website is purely hypothetical, but if you have any questions or feedback about the concept, feel free to reach out to us at kadiryazadzhi@gmail.com. We appreciate your interest!
