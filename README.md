@@ -1,8 +1,28 @@
 # 🏎️ TheTrack - Karting Training Company Website 🏁
 
 <div style="display:flex; flex-direction:row;">
-<img style="width:100%;" src="https://s4.aconvert.com/convert/p3r68-cdx67/a1u89-9lzqs.jpg">
+<img style="width:100%;" src="Image/The.png">
 </div>
+
+<center>
+<div align="center">
+  
+![forthebadge](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) &nbsp;
+![forthebadge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) &nbsp;
+![forthebadge](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) &nbsp;
+![forthebadge](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) &nbsp;
+![forthebadge](https://img.shields.io/badge/WebStorm-000000?style=for-the-badge&logo=WebStorm&logoColor=white) &nbsp;
+
+</div>
+</center>
+
+<h3 align="center">
+    🔹
+    <a href="https://kadiryazadzhi.github.io/portfolio/index.html#contact">Report Bug</a> &nbsp; &nbsp;
+    🔹
+    <a href="https://kadiryazadzhi.github.io/portfolio/index.html#contact">Request Feature</a>
+</h3>
+
 
 ### 📝 Description
 
